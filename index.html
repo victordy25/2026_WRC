@@ -1,862 +1,116 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026 세계 로봇 컨퍼런스 엑스포 (WRC Expo) 가이드</title>
-    <!-- Google Fonts & Tailwind CSS CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Noto Sans KR', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        html { scroll-behavior: smooth; }
-        .custom-scrollbar::-webkit-scrollbar { height: 6px; width: 6px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
-        @media print {
-            .no-print { display: none !important; }
-            body { background: white !important; color: black !important; }
-        }
-    </style>
-</head>
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-sans transition-colors duration-200">
-
-    <!-- Hero Header -->
-    <header class="bg-slate-900 text-white relative overflow-hidden border-b border-slate-800">
-        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:20px_20px]"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 py-12 sm:py-16 relative z-10">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div>
-                    <div class="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs px-3 py-1.5 rounded-full font-semibold mb-4">
-                        <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
-                        2026 World Robot Conference Expo Guide
-                    </div>
-                    <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-white mb-3">
-                        2026 세계 로봇 컨퍼런스 엑스포
-                    </h1>
-                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl font-normal leading-relaxed">
-                        글로벌 로봇 생태계 출품 기업 및 주요 핵심 기업 기술 특징 분석 종합 가이드
-                    </p>
-                </div>
-
-                <!-- Strategic Partner Badge -->
-                <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-5 backdrop-blur-md self-start md:self-auto min-w-[260px] shadow-xl">
-                    <div class="text-xs text-slate-400 font-medium mb-1">글로벌 독점 전략 파트너</div>
-                    <div class="text-xl font-bold text-red-500 flex items-center gap-2">
-                        <span>JD.com</span>
-                        <span class="text-xs text-slate-300 font-normal">(징동그룹)</span>
-                    </div>
-                    <div class="mt-3 text-xs text-slate-400 border-t border-slate-700/60 pt-2 flex items-center justify-between">
-                        <span>전시 규모</span>
-                        <span class="text-white font-semibold">약 50,000㎡ / 1,200+ 기업</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Header Quick Stats -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-10 no-print">
-                <div class="bg-slate-800/50 border border-slate-700/80 rounded-xl p-3.5 text-center">
-                    <div class="text-xs text-slate-400">참가 기업 및 기관</div>
-                    <div class="text-lg sm:text-xl font-bold text-sky-400 mt-0.5">1,200+</div>
-                </div>
-                <div class="bg-slate-800/50 border border-slate-700/80 rounded-xl p-3.5 text-center">
-                    <div class="text-xs text-slate-400">핵심 관람 구역</div>
-                    <div class="text-lg sm:text-xl font-bold text-sky-400 mt-0.5">Area A / B / C</div>
-                </div>
-                <div class="bg-slate-800/50 border border-slate-700/80 rounded-xl p-3.5 text-center">
-                    <div class="text-xs text-slate-400">기업 특징 카드 DB</div>
-                    <div class="text-lg sm:text-xl font-bold text-amber-400 mt-0.5">주요 기업 상세정보</div>
-                </div>
-                <div class="bg-slate-800/50 border border-slate-700/80 rounded-xl p-3.5 text-center">
-                    <div class="text-xs text-slate-400">최초 공개 로봇</div>
-                    <div class="text-lg sm:text-xl font-bold text-sky-400 mt-0.5">6대 신제품</div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Navigation & Search Bar -->
-    <nav class="sticky top-0 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur border-b border-slate-200 dark:border-slate-800 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col sm:flex-row items-center justify-between h-auto sm:h-16 py-3 sm:py-0 gap-3">
-                <div class="flex items-center gap-1 sm:gap-2 overflow-x-auto w-full sm:w-auto custom-scrollbar no-print text-xs sm:text-sm font-semibold">
-                    <a href="#overview" class="py-2 px-3 rounded-lg text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all whitespace-nowrap">엑스포 개요</a>
-                    <a href="#areas" class="py-2 px-3 rounded-lg text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all whitespace-nowrap">구역별 기업 & 특징</a>
-                    <a href="#highlights" class="py-2 px-3 rounded-lg text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all whitespace-nowrap">2026 하이라이트 로봇</a>
-                    <a href="#tips" class="py-2 px-3 rounded-lg text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all whitespace-nowrap">관람 팁</a>
-                </div>
-
-                <div class="flex items-center gap-2 w-full sm:w-auto justify-end no-print">
-                    <button id="toggle-featured-only" onclick="toggleFeaturedFilter()" class="text-xs px-2.5 py-1.5 rounded-lg border border-amber-300 bg-amber-50 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300 dark:border-amber-700 font-semibold hover:bg-amber-100 transition-all whitespace-nowrap">
-                        ⭐ 주요 기업만
-                    </button>
-                    <div class="relative flex-1 sm:w-64">
-                        <input type="text" id="company-search" oninput="filterCompanies()" placeholder="기업명, 기술(휴머노이드, LiDAR...)" class="w-full pl-9 pr-3 py-1.5 text-xs sm:text-sm bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 text-slate-800 dark:text-slate-100">
-                        <svg class="w-4 h-4 absolute left-3 top-2.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-                    </div>
-                    <button onclick="toggleDarkMode()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" title="다크/라이트 모드">
-                        <svg id="theme-toggle-dark-icon" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                        <svg id="theme-toggle-light-icon" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content Container -->
-    <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
-
-        <!-- 1. 엑스포 개요 Section -->
-        <section id="overview" class="scroll-mt-20 bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-700">
-            <div class="flex items-center gap-3 pb-4 mb-6 border-b border-slate-200 dark:border-slate-700">
-                <span class="p-2.5 rounded-xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-                </span>
-                <div>
-                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">1. 엑스포(WRC Expo) 개요</h2>
-                    <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">세계 최대 규모의 로봇 통합 생태계 및 최첨단 기술 전시</p>
-                </div>
-            </div>
-
-            <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
-                2026 세계 로봇 컨퍼런스 엑스포는 로봇 산업 생태계 전반을 아우르는 대표적인 글로벌 전시회입니다. 핵심 부품 공급업체부터 최종 사용자 솔루션 제공업체까지 <strong>전 세계 1,200여 개 이상의 주요 기업 및 연구기관</strong>이 참가하여 최첨단 기술과 상용화 로봇을 선보입니다.
-            </p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700/80 hover:border-sky-500/50 transition-all">
-                    <div class="w-9 h-9 rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold mb-3 text-lg">01</div>
-                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">차세대 응용 기술</h3>
-                    <p class="text-xs text-slate-500 dark:text-slate-400">Next-Gen Applications</p>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2">제조·의료·서비스 등 다양한 현장에 바로 적용 가능한 고도화된 상용 솔루션</p>
-                </div>
-
-                <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700/80 hover:border-sky-500/50 transition-all">
-                    <div class="w-9 h-9 rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold mb-3 text-lg">02</div>
-                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">첨단 기술 프론티어</h3>
-                    <p class="text-xs text-slate-500 dark:text-slate-400">Tech Frontiers</p>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2">구체 지능(Embodied AI), 휴머노이드, 초정밀 모션 제어 등 한계를 넓히는 기술</p>
-                </div>
-
-                <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700/80 hover:border-sky-500/50 transition-all">
-                    <div class="w-9 h-9 rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold mb-3 text-lg">03</div>
-                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">글로벌 R&D 시너지</h3>
-                    <p class="text-xs text-slate-500 dark:text-slate-400">Global R&D Synergy</p>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2">국가 및 지방 로봇 혁신센터, 글로벌 반도체/센서 기업과의 다각도 글로벌 협력</p>
-                </div>
-
-                <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700/80 hover:border-sky-500/50 transition-all">
-                    <div class="w-9 h-9 rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold mb-3 text-lg">04</div>
-                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">신제품 최초 공개</h3>
-                    <p class="text-xs text-slate-500 dark:text-slate-400">Product Premieres</p>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2">차세대 휴머노이드 및 차세대 로봇 메커니즘의 세계 최초 및 실물 시연</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 2. 구역별 출품 기업 & 주요 기업 특징 Section -->
-        <section id="areas" class="scroll-mt-20 bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-700">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-6 border-b border-slate-200 dark:border-slate-700 gap-4">
-                <div class="flex items-center gap-3">
-                    <span class="p-2.5 rounded-xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                    </span>
-                    <div>
-                        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">2. 구역(Area)별 출품 기업 & 주요 기업 특징</h2>
-                        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400"><span class="text-amber-600 dark:text-amber-400 font-semibold">⭐ 표시 기업</span>을 클릭하시면 주요 기술 및 관람 포인트를 보실 수 있습니다.</p>
-                    </div>
-                </div>
-
-                <!-- Area Filter Buttons (Fixed `this` parameter passing) -->
-                <div class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-900 p-1 rounded-xl text-xs font-semibold no-print self-start sm:self-auto">
-                    <button onclick="filterArea(this, 'all')" class="area-filter-btn active px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800 text-slate-800 dark:text-white shadow-sm transition-all">전체보기</button>
-                    <button onclick="filterArea(this, 'Area A')" class="area-filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-all">Area A</button>
-                    <button onclick="filterArea(this, 'Area B')" class="area-filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-green-600 transition-all">Area B</button>
-                    <button onclick="filterArea(this, 'Area C')" class="area-filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-red-600 transition-all">Area C (핵심관)</button>
-                </div>
-            </div>
-
-            <!-- Area Summary Banner Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                <div class="p-4 rounded-xl bg-blue-50/70 dark:bg-slate-900/80 border border-blue-200 dark:border-blue-900/50">
-                    <span class="inline-block px-2.5 py-1 rounded bg-blue-600 text-white font-bold text-xs mb-2">Area A</span>
-                    <h3 class="font-bold text-slate-900 dark:text-white text-sm">로봇 응용, 전문 서비스 & 정밀 부품관</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">서비스용 로봇, 특수·산업 자동화, 대기업 생태계 및 감속기·구동계 집중 구역</p>
-                </div>
-                <div class="p-4 rounded-xl bg-emerald-50/70 dark:bg-slate-900/80 border border-emerald-200 dark:border-emerald-900/50">
-                    <span class="inline-block px-2.5 py-1 rounded bg-emerald-600 text-white font-bold text-xs mb-2">Area B</span>
-                    <h3 class="font-bold text-slate-900 dark:text-white text-sm">핵심 부품, 반도체/센서 & 해외 대표 기업관</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">관절 모터, 비전/LiDAR, 글로벌 IT/반도체 플랫폼 및 한국관 포함 해외 기업 구역</p>
-                </div>
-                <div class="p-4 rounded-xl bg-rose-50/70 dark:bg-slate-900/80 border border-rose-200 dark:border-rose-900/50">
-                    <span class="inline-block px-2.5 py-1 rounded bg-rose-600 text-white font-bold text-xs mb-2">Area C (★핵심관)</span>
-                    <h3 class="font-bold text-slate-900 dark:text-white text-sm">휴머노이드, 구체 지능(Embodied AI) & 클러스터관</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">휴머노이드 대표 브랜드, 국가/지방 혁신센터 및 지역 산업 클러스터 집결 구역</p>
-                </div>
-            </div>
-
-            <!-- Interactive Area Companies Grid Container -->
-            <div id="company-cards-container" class="space-y-6"></div>
-        </section>
-
-        <!-- 3. 2026년 하이라이트 신제품 및 출품 로봇 Section -->
-        <section id="highlights" class="scroll-mt-20 bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-700">
-            <div class="flex items-center gap-3 pb-4 mb-6 border-b border-slate-200 dark:border-slate-700">
-                <span class="p-2.5 rounded-xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                </span>
-                <div>
-                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">3. 2026년 하이라이트 신제품 및 출품 로봇</h2>
-                    <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">세계 최초 공개 및 차세대 버전 핵심 로봇 라인업</p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Robot 1 -->
-                <div class="bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-sky-500 transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-sky-100 text-sky-800 dark:bg-sky-900/60 dark:text-sky-300">정밀 모션</span>
-                            <span class="text-[11px] text-slate-400 font-mono">NEW PREMIERE</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Shot Put SP1 <span class="text-xs font-normal text-slate-500">(铅球SP1)</span></h3>
-                        <p class="text-xs text-sky-600 dark:text-sky-400 font-medium mb-3">Zhishen Xinchuang (Suzhou) Intelligent Tech</p>
-                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-white dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
-                            고출력 토크 밀도 및 차세대 정밀 모션 제어 메커니즘이 적용된 최첨단 다목적 관절형 로봇
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Robot 2 -->
-                <div class="bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-sky-500 transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-rose-100 text-rose-800 dark:bg-rose-900/60 dark:text-rose-300">휴머노이드 / AI</span>
-                            <span class="text-[11px] text-slate-400 font-mono">WORLD PREMIERE</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Tiangong Omni <span class="text-xs font-normal text-slate-500">(天工Omni)</span></h3>
-                        <p class="text-xs text-sky-600 dark:text-sky-400 font-medium mb-3">베이징 휴머노이드 로봇 혁신센터</p>
-                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-white dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
-                            범용 구체 지능(Embodied AI) 플랫폼에 기반한 차세대 전동 휴머노이드 대표 모델
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Robot 3 -->
-                <div class="bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-sky-500 transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">적응형 이동</span>
-                            <span class="text-[11px] text-slate-400 font-mono">NEXT-GEN</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Booster T2</h3>
-                        <p class="text-xs text-sky-600 dark:text-sky-400 font-medium mb-3">Beijing Booster Robotics Technology</p>
-                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-white dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
-                            복잡한 가변 환경 적응형 주행 능력과 다목적 필드 작업 수행 능력을 고루 갖춘 로봇
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Robot 4 -->
-                <div class="bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-sky-500 transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-purple-100 text-purple-800 dark:bg-purple-900/60 dark:text-purple-300">시각-촉각 융합</span>
-                            <span class="text-[11px] text-slate-400 font-mono">GEN-AI ROBOT</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Kengo</h3>
-                        <p class="text-xs text-sky-600 dark:text-sky-400 font-medium mb-3">Xinghai Image (Beijing) AI Technology</p>
-                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-white dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
-                            시각-촉각 멀티모달 융합 생성형 AI 제어 알고리즘이 탑재된 지능형 관절 로봇
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Robot 5 -->
-                <div class="bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-sky-500 transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-amber-100 text-amber-800 dark:bg-amber-900/60 dark:text-amber-300">산업용 고하중</span>
-                            <span class="text-[11px] text-slate-400 font-mono">INDUSTRIAL HUMANOID</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Kepler Kirin Series <span class="text-xs font-normal text-slate-500">(开普勒麒麟)</span></h3>
-                        <p class="text-xs text-sky-600 dark:text-sky-400 font-medium mb-3">Shanghai Kepler Robot</p>
-                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-white dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
-                            고난도 산업 제조 및 물류 작업 현장에 특화된 고하중 양팔 휴머노이드 플랫폼
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Robot 6 -->
-                <div class="bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-sky-500 transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-indigo-100 text-indigo-800 dark:bg-indigo-900/60 dark:text-indigo-300">유연 관절</span>
-                            <span class="text-[11px] text-slate-400 font-mono">FLEX-JOINTS</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Vbot Humanoid Robot</h3>
-                        <p class="text-xs text-sky-600 dark:text-sky-400 font-medium mb-3">Vita Dynamics (Beijing) Technology</p>
-                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-white dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
-                            인간 수준의 유연한 고정밀 관절 제어 기술이 적용된 차세대 다기능 휴머노이드
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. 참관 목적별 맞춤 추천 동선 Section -->
-        <section id="tips" class="scroll-mt-20 bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-700">
-            <div class="flex items-center gap-3 pb-4 mb-6 border-b border-slate-200 dark:border-slate-700">
-                <span class="p-2.5 rounded-xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-                </span>
-                <div>
-                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">4. 참관 목적별 맞춤 추천 동선 팁</h2>
-                    <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">목적에 맞게 선택하여 시간을 효율적으로 배분하세요.</p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Tip 1 -->
-                <div class="bg-blue-50/50 dark:bg-slate-900/80 rounded-xl p-5 border border-blue-200 dark:border-blue-900/40 relative">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs">1</span>
-                        <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">완제품 상용 로봇 & 물류 탐색</h3>
-                    </div>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
-                        상용화된 서비스 및 물류 로봇 기술을 집중 탐색하려면 <strong class="text-blue-600 dark:text-blue-400">Area A</strong> 중심으로 관람하세요.
-                    </p>
-                    <div class="bg-white dark:bg-slate-800 p-3 rounded-lg text-xs text-slate-500 dark:text-slate-400 border border-blue-100 dark:border-slate-700">
-                        📍 <strong>추천 주요 부스:</strong> RealMan, KEENON Robotics, JD.com (징동), Haier 부스
-                    </div>
-                </div>
-
-                <!-- Tip 2 -->
-                <div class="bg-emerald-50/50 dark:bg-slate-900/80 rounded-xl p-5 border border-emerald-200 dark:border-emerald-900/40 relative">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-xs">2</span>
-                        <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">글로벌 공급망 & 부품 소싱</h3>
-                    </div>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
-                        글로벌 반도체 플랫폼, 센서 및 핵심 감속기/모터 업체를 찾으려면 <strong class="text-emerald-600 dark:text-emerald-400">Area B</strong>를 탐색하세요.
-                    </p>
-                    <div class="bg-white dark:bg-slate-800 p-3 rounded-lg text-xs text-slate-500 dark:text-slate-400 border border-emerald-100 dark:border-slate-700">
-                        📍 <strong>추천 주요 부스:</strong> AMD, Infineon, Hesai, maxon, Harmonic Drive, 한국관(로보티즈 외)
-                    </div>
-                </div>
-
-                <!-- Tip 3 -->
-                <div class="bg-rose-50/50 dark:bg-slate-900/80 rounded-xl p-5 border border-rose-200 dark:border-rose-900/40 relative">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="w-7 h-7 rounded-full bg-rose-600 text-white flex items-center justify-center font-bold text-xs">3</span>
-                        <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">차세대 피지컬 AI & 휴머노이드</h3>
-                    </div>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
-                        최신 피지컬 AI와 차세대 휴머노이드 로봇 기술 동향을 한눈에 파악하려면 <strong class="text-rose-600 dark:text-rose-400">Area C</strong>를 필수 집중 참관하세요.
-                    </p>
-                    <div class="bg-white dark:bg-slate-800 p-3 rounded-lg text-xs text-slate-500 dark:text-slate-400 border border-rose-100 dark:border-slate-700">
-                        📍 <strong>추천 주요 부스:</strong> 국가/베이징 휴머노이드 혁신센터, UBTECH, Unitree, LimX Dynamics
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Modal for Company Feature Details -->
-    <div id="company-modal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white dark:bg-slate-800 rounded-2xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 sm:p-7 shadow-2xl border border-slate-200 dark:border-slate-700 relative">
-            <button onclick="closeCompanyModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-            </button>
-
-            <div class="flex items-center gap-2 mb-2">
-                <span id="modal-area-badge" class="px-2.5 py-0.5 rounded font-bold text-xs bg-blue-600 text-white">Area A</span>
-                <span id="modal-category-badge" class="text-xs font-semibold text-sky-600 dark:text-sky-400">카테고리</span>
-            </div>
-
-            <h3 id="modal-company-name" class="text-xl font-bold text-slate-900 dark:text-white mb-4 pr-6">기업 이름</h3>
-
-            <div class="space-y-4 text-xs sm:text-sm">
-                <div class="bg-slate-50 dark:bg-slate-900 p-3.5 rounded-xl border border-slate-200 dark:border-slate-700">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">핵심 분야 (Focus Area)</span>
-                    <p id="modal-company-focus" class="text-slate-800 dark:text-slate-200 font-medium">핵심 분야 정보</p>
-                </div>
-
-                <div>
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1.5">주요 기술 & 기업 특징 (Key Features)</span>
-                    <ul id="modal-company-features" class="list-disc list-inside space-y-1.5 text-slate-600 dark:text-slate-300 leading-relaxed bg-sky-50/50 dark:bg-slate-900/60 p-3.5 rounded-xl border border-sky-100 dark:border-slate-700">
-                    </ul>
-                </div>
-
-                <div class="bg-amber-50 dark:bg-amber-900/30 p-3.5 rounded-xl border border-amber-200 dark:border-amber-800/50">
-                    <span class="text-xs font-bold text-amber-800 dark:text-amber-300 uppercase tracking-wider block mb-1">💡 참관 핵심 포인트 (Key Takeaway)</span>
-                    <p id="modal-company-takeaway" class="text-amber-900 dark:text-amber-200 text-xs leading-relaxed">참관 포인트 정보</p>
-                </div>
-            </div>
-
-            <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700 flex justify-end">
-                <button onclick="closeCompanyModal()" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 dark:bg-slate-700 dark:hover:bg-slate-600 text-white rounded-lg text-xs font-semibold">
-                    닫기
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <footer class="mt-16 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500 dark:text-slate-400">
-        <div class="max-w-7xl mx-auto px-4 space-y-2">
-            <p>© 2026 World Robot Conference Expo Guide | 2026 세계 로봇 컨퍼런스 엑스포 안내 가이드</p>
-            <p class="text-slate-400 dark:text-slate-500">본 가이드는 WRC Expo 공식 출품 현황 및 핵심 기업 데이터베이스를 기반으로 제공됩니다.</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript Data Engine -->
-    <script>
-        const FEATURED_COMPANIES_DB = {
-            "JD.com (글로벌 독점 전략 파트너)": {
-                featured: true,
-                focus: "풀필먼트 무인 물류, 자율주행 배송, 스마트 유통망",
-                features: [
-                    "WRC Expo 공식 글로벌 독점 전략 파트너",
-                    "대규모 자율주행 물류 로봇, 무인 창고 자동화 셀 실물 전시",
-                    "라스트마일 드론 및 배송 로봇 통합 플랫폼 운용"
-                ],
-                takeaway: "중국 최대 유통망과의 물류 로봇 시스템 통합 및 인프라 협력 기회 확인"
-            },
-            "RealMan Intelligent Tech": {
-                featured: true,
-                focus: "초경량 협동 로봇 팔, 시각 지능 모듈",
-                features: [
-                    "상용 서비스 및 상업용 조리/서빙용 초경량 관절 로봇 모듈 주력",
-                    "높은 가성비와 손쉬운 API 프로그래밍 제공"
-                ],
-                takeaway: "식음료(F&B) 및 매장 자동화 솔루션 부스 집중 탐색"
-            },
-            "KEENON Robotics": {
-                featured: true,
-                focus: "상업용 서빙·배달·방역 자율주행 로봇",
-                features: [
-                    "글로벌 서비스 로봇 점유율 선도 기업",
-                    "다중 로봇 군집 제어 알고리즘 및 슬램(SLAM) 내비게이션 기술 보유"
-                ],
-                takeaway: "호텔, 병원, 식당용 실내 자율주행 상용화 완제품 비교"
-            },
-            "Leader Harmonious Drive Systems (리더 하모닉)": {
-                featured: true,
-                focus: "정밀 하모닉 감속기 (Harmonic Reducer)",
-                features: [
-                    "중국 최대 하모닉 감속기 제조 업체로 휴머노이드 관절 부품 선도 공급",
-                    "고출력 밀도 및 초소형 초정밀 라인업 보유"
-                ],
-                takeaway: "휴머노이드 및 관절 로봇 제조사의 원가 절감형 감속기 공급망 파악"
-            },
-            "Beijing Longwood Valley Medical (Changmugu Medical)": {
-                featured: false,
-                focus: "정형외과 수술 보조 수술용 정밀 로봇",
-                features: [
-                    "AI 영상 진단 기반의 정밀 인공관절 수술 로봇 개발",
-                    "의료기기 인허가 완료된 상용화 시스템"
-                ],
-                takeaway: "중국 최첨단 의료/수술 로봇 시장 동향 파악"
-            },
-            "Hesai Technology (헤사이)": {
-                featured: true,
-                focus: "고성능 3D LiDAR (라이다) 센서",
-                features: [
-                    "글로벌 자율주행 및 로봇용 LiDAR 시장 선도 업체",
-                    "초소형 고정형(Solid-State) LiDAR 및 하이브리드 고해상도 라인업",
-                    "휴머노이드 및 AMR의 시각/거리 감지 핵심 부품"
-                ],
-                takeaway: "차세대 로봇 자율주행용 핵심 라이다 공급망 검증"
-            },
-            "Orbbec 3D (오르벡)": {
-                featured: true,
-                focus: "3D 비전 카메라, Depth 센서",
-                features: [
-                    "로봇용 3D 공간 인식 및 물체 인식 3D 카메라 특화",
-                    "NVIDIA 플랫폼과 연동되는 광학 비전 모듈 제공"
-                ],
-                takeaway: "휴머노이드 및 협동로봇용 입체 비전 센서 소싱"
-            },
-            "ROBOTIS (로보티즈)": {
-                featured: true,
-                focus: "스마트 액추에이터(Dynamixel), 자율주행 실외 배송로봇(개미)",
-                features: [
-                    "한국관 대표 참출 기업, 고정밀 사이클로이드 감속기 일체형 다이나믹셀 전시",
-                    "실외 자율주행 로봇 서비스 상용화 노하우 보유"
-                ],
-                takeaway: "국산 고성능 액추에이터 및 실외 자율주행 기술력 확인"
-            },
-            "Neuromeka (뉴로메카)": {
-                featured: true,
-                focus: "협동로봇(Indy), 자율이동로봇(Moby), 차세대 제어기",
-                features: [
-                    "충돌 감지 안전 알고리즘 기반 협동로봇 솔루션",
-                    "중소 제조현장 맞춤형 스마트 팩토리 셀 구축"
-                ],
-                takeaway: "국산 협동로봇의 가격 경쟁력 및 제어 소프트웨어 확인"
-            },
-            "maxon motor (맥슨모터)": {
-                featured: true,
-                focus: "초정밀 DC/BLDC 모터, 드라이브 관절 모듈",
-                features: [
-                    "스위스 명품 모터 브랜드, 우주 탐사선 및 정밀 의료/로봇용 관절 공급",
-                    "휴머노이드 전용 고밀도 토크 모터 솔루션 선보임"
-                ],
-                takeaway: "최고 수준의 초정밀 모터 및 토크 밀도 기술력 비교"
-            },
-            "Harmonic Drive Systems": {
-                featured: true,
-                focus: "글로벌 오리지널 정밀 하모닉 드라이브",
-                features: [
-                    "세계 정밀 감속기 표준을 제시하는 일본 오리지널 브랜딩",
-                    "휴머노이드 손가락 및 관절용 초소형 감속기 전면 배치"
-                ],
-                takeaway: "글로벌 정밀 감속기 표준 기술 점검"
-            },
-            "AMD": {
-                featured: true,
-                focus: "임베디드 AI 칩셋, 엣지 컴퓨팅 FPGA (Kria)",
-                features: [
-                    "로봇 실시간 제어 및 엣지 AI 처리를 위한 자일링스(Xilinx) 연동 솔루션",
-                    "멀티모달 AI 로봇 제어용 고성능 가속기 제공"
-                ],
-                takeaway: "로봇 메인 제어반용 엣지 AI 프로세서 파트너십 구축"
-            },
-            "Infineon Technologies (China)": {
-                featured: true,
-                focus: "전력 반도체, 모터 드라이버 IC, 센서",
-                features: [
-                    "로봇 관절 모터 구동용 고효율 SiC/GaN 전력 반도체",
-                    "고신뢰성 모터 제어 및 안전 시스템 센서"
-                ],
-                takeaway: "로봇 배터리 효율 및 모터 제어 회로 부품 탐색"
-            },
-            "국가-지방 공동 휴머노이드 로봇 혁신센터": {
-                featured: true,
-                focus: "국가 차원 휴머노이드 오픈소스 모션 플랫폼",
-                features: [
-                    "중국 국가 차원의 기술 연구 결과물 집중 공개",
-                    "공통 하드웨어 플랫폼 및 소프트웨어 오픈소스 생태계 조성"
-                ],
-                takeaway: "중국 휴머노이드 로봇 국가 표준 및 기술 프레임워크 확인"
-            },
-            "베이징 휴머노이드 로봇 혁신센터": {
-                featured: true,
-                focus: "전동 휴머노이드 'Tiangong(天工)', Embodied AI",
-                features: [
-                    "세계 최초 범용 Embodied AI 기반 풀사이즈 전동 휴머노이드 'Tiangong' 개발",
-                    "시속 6km/h 순수 전동 달리기 및 가변 지형 이동 실연"
-                ],
-                takeaway: "Area C 최고 인기도 부스, 'Tiangong Omni' 차세대 모델 시연 관람 필수"
-            },
-            "UBTECH Robotics (유비텍)": {
-                featured: true,
-                focus: "산업용 휴머노이드 'Walker S', 교육/서비스 로봇",
-                features: [
-                    "홍콩 증시 상장 휴머노이드 선도 기업",
-                    "제조 공장(전기차 생산라인)에 투입되어 품질 검사 및 작업 수행 실증"
-                ],
-                takeaway: "실제 자동차 생산라인에 적용된 휴머노이드 상용화 수준 평가"
-            },
-            "Unitree Robotics (유니트리/유슈)": {
-                featured: true,
-                focus: "4족 보행 로봇(Go2/B2), 범용 휴머노이드(H1/G1)",
-                features: [
-                    "글로벌 4족 보행 로봇 점유율 1위 및 저가격대 파격적 휴머노이드 출시",
-                    "고성능 자사 개발 모터 및 뛰어난 동적 밸런싱 능력"
-                ],
-                takeaway: "파격적 가성비 휴머노이드 'G1' 및 4족 보행 로봇 현장 퍼포먼스 체감"
-            },
-            "LimX Dynamics": {
-                featured: true,
-                focus: "다리-바퀴 복합 휴머노이드, 강화학습 모션 제어",
-                features: [
-                    "바퀴와 다리를 결합한 휠-레그(Wheel-leg) 로봇 'W1' 및 휴머노이드 'CL-1'",
-                    "계단 및 험지 돌파 능력이 탁월한 딥 강화학습 모션 알고리즘"
-                ],
-                takeaway: "복합 지형 적응형 주행 메커니즘 기술력 점검"
-            }
-        };
-
-        const WRC_DATA = [
-            {
-                area: "Area A",
-                title: "Area A: 로봇 응용, 전문 서비스, 대기업 및 정밀 부품관",
-                colorClass: "blue",
-                categories: [
-                    {
-                        name: "로봇 플랫폼 & AI 응용",
-                        companies: ["RealMan Intelligent Tech", "Beijing Yunji Tech", "KEENON Robotics", "Kepler Robot", "FAW (Suzhou) Robot", "Sichuan TLIBOT", "SENAD Technology"]
-                    },
-                    {
-                        name: "의료 & 특수 로봇",
-                        companies: ["Beijing Longwood Valley Medical (Changmugu Medical)", "Qianglian Zhichuang"]
-                    },
-                    {
-                        name: "산업용 & 중공업 자동화",
-                        companies: ["Wolong Electric Drive Group", "Shandong Guoxing Intelligent", "Hangzhou Shenhao Tech", "CITIC Heavy Industries"]
-                    },
-                    {
-                        name: "대기업 & 플랫폼",
-                        companies: ["JD.com (글로벌 독점 전략 파트너)", "Haier Home Robot"]
-                    },
-                    {
-                        name: "연구기관 & 대학",
-                        companies: ["CETC 21st Research Institute (China Electronic Tech Robot)", "베이징과학기술대학교 지능 바이오닉 무인 시스템 연구팀"]
-                    },
-                    {
-                        name: "부품, 감속기 & 구동계",
-                        companies: ["Leader Harmonious Drive Systems (리더 하모닉)", "STEP Robot", "Moons' Electric", "Kinco Automation", "Luoyang Hongyuan Bearing", "CCTY Company", "Benmo Dynamics"]
-                    }
-                ]
-            },
-            {
-                area: "Area B",
-                title: "Area B: 핵심 부품, 글로벌 반도체/센서 및 해외 대표 기업관",
-                colorClass: "emerald",
-                categories: [
-                    {
-                        name: "로봇 제어 & 지능형 상호작용",
-                        companies: ["Booster Robotics", "Yaskawa Shougang Robot", "Siasun Robot & Automation", "SMC Automation", "Zhejiang Hechuan Humanoid Robot", "Spirit AI", "EngineAI", "ROBOTERA", "PaXini Tech", "Inspire Robots"]
-                    },
-                    {
-                        name: "글로벌 IT & 반도체 기업",
-                        companies: ["AMD", "3M China", "Infineon Technologies (China)", "Realtek Semiconductor"]
-                    },
-                    {
-                        name: "비전, 센서 & LiDAR",
-                        companies: ["Hesai Technology (헤사이)", "Orbbec 3D (오르벡)", "Ningbo Keli Sensing", "ZVISION", "Slamtec", "Livox"]
-                    },
-                    {
-                        name: "한국관 & 해외 주요 기업",
-                        companies: ["ROBOTIS (로보티즈)", "Neuromeka (뉴로메카)", "Neubility (뉴빌리티)", "Wonik Robotics (원익로보틱스)", "Hyundai Sungwoo Solite (현대성우솔라이트)", "Solid Vue (솔리드뷰)", "Iron Device (아이언디바이스)", "Singapore Robotics Society"]
-                    },
-                    {
-                        name: "정밀 드라이브 & 모션 구동 부품",
-                        companies: ["maxon motor (맥슨모터)", "FAULHABER", "Harmonic Drive Systems", "Schaeffler (셰플러)", "MISUMI (미스미)", "igus (이구스)", "GigaDevice", "Black Sesame Technologies"]
-                    }
-                ]
-            },
-            {
-                area: "Area C",
-                title: "Area C: 휴머노이드 로봇(Humanoid), 구체 지능(Embodied AI) 및 지역 클러스터관",
-                colorClass: "rose",
-                categories: [
-                    {
-                        name: "국가 & 지방 휴머노이드 혁신센터",
-                        companies: ["국가-지방 공동 휴머노이드 로봇 혁신센터", "베이징 휴머노이드 로봇 혁신센터", "절강 휴머노이드 로봇 혁신센터", "후베이 휴머노이드 로봇 혁신센터", "광둥 구체지능 로봇 혁신센터", "청두 휴머노이드 로봇 혁신센터"]
-                    },
-                    {
-                        name: "선도 휴머노이드 & AI 로봇 브랜드",
-                        companies: ["UBTECH Robotics (유비텍)", "Unitree Robotics (유니트리/유슈)", "iFLYTEK (아이플라이텍)", "Dobot Robotics (두봇)", "LimX Dynamics", "Galbot", "Fourier Intelligence", "Astribot", "Vbot (Vita Dynamics)", "Magiclab Robotics", "Deep Robotics"]
-                    },
-                    {
-                        name: "특설관 & 연구기관",
-                        companies: ["중앙기업관 (Central Enterprises Exhibition Area)", "베이징 범용인공지능연구원 (BIGAI)", "강회첨단기술협동혁신센터"]
-                    },
-                    {
-                        name: "지역 로봇 산업 클러스터",
-                        companies: ["청두 클러스터: Chengdu CRP Robot, Aerospace Kaite, Reedy Intelligent Drive", "우한/후베이 클러스터: Optics Valley Huahui, Jingchu Humanoid Robot, Gelanruo Intelligent Robot, Wanji Optoelectronics"]
-                    }
-                ]
-            }
-        ];
-
-        let currentAreaFilter = 'all';
-        let currentSearchQuery = '';
-        let featuredOnly = false;
-
-        function renderCompanies() {
-            const container = document.getElementById('company-cards-container');
-            container.innerHTML = '';
-
-            let totalMatches = 0;
-
-            WRC_DATA.forEach(areaData => {
-                if (currentAreaFilter !== 'all' && areaData.area !== currentAreaFilter) return;
-
-                const filteredCategories = areaData.categories.map(cat => {
-                    const matchedCompanies = cat.companies.filter(c => {
-                        const isFeatured = FEATURED_COMPANIES_DB[c]?.featured;
-                        const matchesSearch = c.toLowerCase().includes(currentSearchQuery.toLowerCase()) || 
-                                              cat.name.toLowerCase().includes(currentSearchQuery.toLowerCase());
-
-                        if (featuredOnly) {
-                            return isFeatured && matchesSearch;
-                        }
-                        return matchesSearch;
-                    });
-                    return { ...cat, companies: matchedCompanies };
-                }).filter(cat => cat.companies.length > 0);
-
-                if (filteredCategories.length === 0) return;
-
-                totalMatches += filteredCategories.reduce((acc, c) => acc + c.companies.length, 0);
-
-                const areaBlock = document.createElement('div');
-                areaBlock.className = "border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden shadow-sm bg-slate-50/50 dark:bg-slate-900/50";
-
-                let badgeColor = areaData.area === 'Area A' ? 'bg-blue-600 text-white' : (areaData.area === 'Area B' ? 'bg-emerald-600 text-white' : 'bg-rose-600 text-white');
-
-                areaBlock.innerHTML = `
-                    <div class="bg-slate-100 dark:bg-slate-800/90 p-4 border-b border-slate-200 dark:border-slate-700 flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <span class="px-2.5 py-0.5 rounded font-bold text-xs ${badgeColor}">${areaData.area}</span>
-                            <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">${areaData.title}</h3>
-                        </div>
-                    </div>
-                    <div class="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                        ${filteredCategories.map(cat => `
-                            <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                                <h4 class="font-bold text-xs sm:text-sm text-sky-600 dark:text-sky-400 mb-3 flex items-center gap-1.5 pb-2 border-b border-slate-100 dark:border-slate-700">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
-                                    ${cat.name}
-                                </h4>
-                                <div class="flex flex-wrap gap-2">
-                                    ${cat.companies.map(comp => {
-                                        const featureData = FEATURED_COMPANIES_DB[comp];
-                                        if (featureData) {
-                                            return `
-                                                <button onclick="openCompanyModal('${comp.replace(/'/g, "\\'")}', '${areaData.area}', '${cat.name}')" 
-                                                    class="inline-flex items-center gap-1 bg-amber-50 hover:bg-amber-100 text-amber-900 dark:bg-amber-900/40 dark:hover:bg-amber-900/70 dark:text-amber-200 text-xs font-medium px-2.5 py-1.5 rounded-lg border border-amber-300 dark:border-amber-700/80 transition-all shadow-sm text-left group">
-                                                    <span class="text-amber-500 group-hover:scale-125 transition-transform">⭐</span>
-                                                    <span>${comp}</span>
-                                                </button>
-                                            `;
-                                        } else {
-                                            return `
-                                                <span class="inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-800 dark:text-slate-200 text-xs px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-600">
-                                                    ${comp}
-                                                </span>
-                                            `;
-                                        }
-                                    }).join('')}
-                                </div>
-                            </div>
-                        `).join('')}
-                    </div>
-                `;
-
-                container.appendChild(areaBlock);
-            });
-
-            if (totalMatches === 0) {
-                container.innerHTML = `
-                    <div class="text-center py-12 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-dashed border-slate-300 dark:border-slate-700">
-                        <p class="text-slate-500 dark:text-slate-400 text-sm">검색 결과가 없습니다.</p>
-                    </div>
-                `;
-            }
-        }
-
-        function openCompanyModal(companyName, area, category) {
-            const data = FEATURED_COMPANIES_DB[companyName];
-            if (!data) return;
-
-            document.getElementById('modal-area-badge').innerText = area;
-            document.getElementById('modal-category-badge').innerText = category;
-            document.getElementById('modal-company-name').innerText = companyName;
-            document.getElementById('modal-company-focus').innerText = data.focus;
-            document.getElementById('modal-company-takeaway').innerText = data.takeaway;
-
-            const featuresUl = document.getElementById('modal-company-features');
-            featuresUl.innerHTML = data.features.map(f => `<li>${f}</li>`).join('');
-
-            document.getElementById('company-modal').classList.remove('hidden');
-        }
-
-        function closeCompanyModal() {
-            document.getElementById('company-modal').classList.add('hidden');
-        }
-
-        function toggleFeaturedFilter() {
-            featuredOnly = !featuredOnly;
-            const btn = document.getElementById('toggle-featured-only');
-            if (featuredOnly) {
-                btn.classList.add('bg-amber-500', 'text-white');
-                btn.classList.remove('bg-amber-50', 'text-amber-800');
-            } else {
-                btn.classList.remove('bg-amber-500', 'text-white');
-                btn.classList.add('bg-amber-50', 'text-amber-800');
-            }
-            renderCompanies();
-        }
-
-        // Fixed Area Filter function receiving button element (`btnElement`)
-        function filterArea(btnElement, area) {
-            currentAreaFilter = area;
-            document.querySelectorAll('.area-filter-btn').forEach(btn => {
-                btn.classList.remove('active', 'bg-white', 'dark:bg-slate-800', 'text-slate-800', 'dark:text-white', 'shadow-sm');
-                btn.classList.add('text-slate-600', 'dark:text-slate-400');
-            });
-
-            if (btnElement) {
-                btnElement.classList.add('active', 'bg-white', 'dark:bg-slate-800', 'text-slate-800', 'dark:text-white', 'shadow-sm');
-                btnElement.classList.remove('text-slate-600', 'dark:text-slate-400');
-            }
-
-            renderCompanies();
-        }
-
-        function filterCompanies() {
-            currentSearchQuery = document.getElementById('company-search').value;
-            renderCompanies();
-        }
-
-        function toggleDarkMode() {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-                updateThemeIcons(false);
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-                updateThemeIcons(true);
-            }
-        }
-
-        function updateThemeIcons(isDark) {
-            const darkIcon = document.getElementById('theme-toggle-dark-icon');
-            const lightIcon = document.getElementById('theme-toggle-light-icon');
-            if (isDark) {
-                darkIcon.classList.add('hidden');
-                lightIcon.classList.remove('hidden');
-            } else {
-                darkIcon.classList.remove('hidden');
-                lightIcon.classList.add('hidden');
-            }
-        }
-
-        function initTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-                document.documentElement.classList.add('dark');
-                updateThemeIcons(true);
-            } else {
-                document.documentElement.classList.remove('dark');
-                updateThemeIcons(false);
-            }
-        }
-
-        window.onload = function() {
-            initTheme();
-            renderCompanies();
-        };
-    </script>
-</body>
-</html>
+<!DOCTYPE html><html lang="ko" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2026 세계로봇대회 엑스포 (WRC Expo) 가이드 · 검증판</title><style>
+:root{--bg:#f8fafc;--card:#fff;--txt:#1e293b;--mut:#64748b;--bd:#e2e8f0;--chip:#f1f5f9;--acc:#0ea5e9}
+html[data-theme=dark]{--bg:#0f172a;--card:#1e293b;--txt:#e2e8f0;--mut:#94a3b8;--bd:#334155;--chip:#334155;--acc:#38bdf8}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6;transition:background .2s}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+header.hero{background:#0f172a;color:#fff;padding:38px 0 30px}
+.tag{display:inline-block;border:1px solid #38bdf8;color:#7dd3fc;font-size:11px;font-weight:700;padding:4px 11px;border-radius:20px;margin-bottom:12px}
+header.hero h1{font-size:30px;font-weight:800;margin:0 0 6px;letter-spacing:-.5px}
+header.hero .sub{color:#cbd5e1;font-size:14px;margin:0 0 16px}
+.verified{background:#064e3b;border:1px solid #10b981;color:#d1fae5;border-radius:10px;padding:12px 14px;font-size:12.5px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}
+.stats div{background:#1e293b;border:1px solid #334155;border-radius:10px;padding:11px 6px;text-align:center}
+.stats .k{color:#94a3b8;font-size:11px}.stats .v{color:#38bdf8;font-size:18px;font-weight:800}
+nav{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--bd)}
+nav .in{display:flex;align-items:center;gap:8px;height:56px;overflow-x:auto}
+nav a{font-size:13px;font-weight:600;color:var(--mut);text-decoration:none;padding:7px 11px;border-radius:8px;white-space:nowrap}
+nav a:hover{color:var(--acc);background:var(--chip)}
+nav .sp{flex:1}
+button.btn{font-family:inherit;font-size:12px;font-weight:600;border:1px solid var(--bd);background:var(--card);color:var(--txt);border-radius:8px;padding:7px 11px;cursor:pointer;white-space:nowrap}
+button.btn:hover{border-color:var(--acc)}
+button.btn.on{background:#0f172a;color:#fff;border-color:#0f172a}
+html[data-theme=dark] button.btn.on{background:#38bdf8;color:#0f172a}
+input#q{font-family:inherit;font-size:13px;padding:8px 11px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--txt);width:230px}
+section{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:24px;margin:22px 0}
+h2{font-size:20px;font-weight:800;margin:0 0 4px;padding-bottom:8px;border-bottom:2.5px solid var(--acc)}
+.ssub{color:var(--mut);font-size:13px;margin:6px 0 16px}
+.day{border:1px solid var(--bd);border-radius:10px;padding:9px 13px;margin-bottom:6px;font-size:13px}
+.tip{background:#eff6ff;border:1px solid #bfdbfe;color:#1e3a8a;border-radius:8px;padding:9px 12px;font-size:12.5px}
+html[data-theme=dark] .tip{background:#172554;border-color:#1e40af;color:#bfdbfe}
+.hallhead{color:#fff;padding:11px 15px;border-radius:11px 11px 0 0;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.hallhead .c{font-weight:800;font-size:16px}.hallhead .n{font-size:12px;opacity:.9}
+.hallhead .p{font-size:11px;background:rgba(255,255,255,.2);padding:3px 10px;border-radius:12px}
+.hallbox{border:1px solid var(--bd);border-top:0;border-radius:0 0 11px 11px;padding:14px;margin-bottom:16px}
+.halldesc{color:var(--mut);font-size:13px;margin:0 0 12px}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.cat{border:1px solid var(--bd);border-radius:10px;padding:11px}
+.catname{font-size:12.5px;font-weight:700;color:var(--acc);border-bottom:1px solid var(--bd);padding-bottom:6px;margin-bottom:8px}
+.chip{display:inline-block;background:var(--chip);border:1px solid var(--bd);border-radius:7px;padding:4px 8px;font-size:11.5px;margin:0 4px 5px 0}
+.chip.f{background:#fef3c7;border-color:#fcd34d;color:#78350f;font-weight:600;cursor:pointer}
+.chip.f:hover{background:#fde68a}
+html[data-theme=dark] .chip.f{background:#78350f;border-color:#b45309;color:#fde68a}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px}
+.co{border:1px solid var(--bd);border-radius:12px;padding:14px}
+.co .top{font-size:11px;color:var(--mut);margin-bottom:5px}
+.badge{display:inline-block;color:#fff;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:5px;margin-right:6px}
+.co h4{font-size:15px;font-weight:800;margin:0 0 8px}
+.focus{background:var(--chip);border-left:3px solid var(--acc);padding:7px 11px;font-size:12.5px;border-radius:0 6px 6px 0;margin-bottom:8px}
+.lbl{display:block;font-size:10px;font-weight:700;color:var(--mut);letter-spacing:.5px}
+.co ul{margin:0 0 8px;padding-left:18px}.co li{font-size:12.5px;margin-bottom:3px}
+.take{background:#fffbeb;border:1px solid #fde68a;color:#78350f;border-radius:8px;padding:8px 11px;font-size:12.5px}
+html[data-theme=dark] .take{background:#451a03;border-color:#92400e;color:#fde68a}
+.rdesc{font-size:12.5px;color:var(--txt);background:var(--chip);border-radius:8px;padding:9px 11px;margin-top:6px}
+.rname{font-size:15px;font-weight:800;margin:7px 0 0}
+.rwhere{float:right;font-size:10.5px;color:var(--mut)}
+.route{border:1px solid var(--bd);border-radius:12px;padding:14px;margin-bottom:12px;display:grid;grid-template-columns:210px 1fr;gap:16px}
+.route ol{margin:8px 0;padding-left:20px}.route li{font-size:13px;margin-bottom:4px}
+.rnum{display:inline-flex;width:22px;height:22px;align-items:center;justify-content:center;color:#fff;border-radius:50%;font-size:12px;font-weight:700;margin-right:8px}
+.rpath{display:inline-block;background:var(--chip);border-radius:6px;padding:4px 10px;font-size:11.5px;font-weight:600;margin:7px 0}
+.fpwrap{border:1px solid var(--bd);border-radius:12px;padding:12px;background:var(--card)}
+.rbtns{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.modal{position:fixed;inset:0;background:rgba(15,23,42,.7);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
+.modal.open{display:flex}
+.mbox{background:var(--card);border-radius:16px;max-width:560px;width:100%;max-height:85vh;overflow:auto;padding:22px;position:relative}
+.mclose{position:absolute;top:12px;right:12px;border:0;background:var(--chip);color:var(--txt);width:30px;height:30px;border-radius:8px;cursor:pointer;font-size:16px}
+footer{text-align:center;color:var(--mut);font-size:11.5px;padding:26px 16px 40px}
+.hide{display:none!important}
+@media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}.route{grid-template-columns:1fr}header.hero h1{font-size:22px}input#q{width:150px}}
+@media print{nav,.rbtns,button.btn{display:none!important}section{break-inside:avoid}}
+</style></head><body><header class="hero"><div class="wrap"><div class="tag">2026 WORLD ROBOT EXPO · 공식자료 검증판 v2</div><h1>2026 세계로봇대회 엑스포 (WRC Expo)</h1><p class="sub">2026년 8월 19일(수)~23일(일) · 베이런 이촹 국제전시컨벤션센터(北人亦创国际会展中心), 베이징 경제기술개발구</p><div class="verified">WRC 공식 사이트(출품 기업 명부·亮点展品), 주최 측 보도자료(wrc.cie.org.cn), 베이징시 공식 발표를 대조해 재작성했습니다.</div><div class="stats"><div><div class="k">출품 기업</div><div class="v">300+</div></div><div><div class="k">전시품</div><div class="v">2,000+</div></div><div><div class="k">최초 공개 신제품</div><div class="v">150+</div></div><div><div class="k">전시 면적</div><div class="v">약 5.5만㎡</div></div></div></div></header><nav><div class="wrap in"><a href="#overview">개요·테마데이</a><a href="#plan">배치도</a><a href="#routes">추천 동선</a><a href="#halls">관별 기업</a><a href="#featured">주요 기업</a><a href="#new">신제품</a><span class="sp"></span><input id="q" placeholder="기업·기술 검색 (LiDAR, 감속기…)" oninput="filterChips()"><button class="btn" onclick="toggleTheme()">🌓</button></div></nav><div class="wrap"><section id="overview"><h2>1. 엑스포 개요 &amp; 테마 데이</h2><p class="ssub">올해 처음으로 일자별 테마 데이가 도입되어, 방문 목적에 따라 날짜 선택이 중요해졌습니다.</p><div class="day"><b>8/19 (수) · 발표의 날 (Release Day)</b> — 주요 성과·신제품 최초 공개·협력 발표가 집중. 신제품 위주라면 이날 오전 C관</div><div class="day"><b>8/20 (목) · 구매상담의 날 (Procurement Day)</b> — 구매 상담회·공급망 매칭 세션 운영. 소싱 목적이면 이날 B·A관</div><div class="day"><b>8/21 (금) · 개발자의 날 (Developer Day)</b> — 전 세계 개발자 기술 교류. SDK·플랫폼 논의에 최적</div><div class="day"><b>8/22~23 (토·일) · 일반 공개일 (Public Open Days)</b> — 최대 혼잡. 가족 단위는 D관 퍼포먼스 중심 권장</div><div class="tip" style="margin-top:10px">티켓: 대회와 로봇대회(World Robot Contest) 티켓 상호 할인 적용. 기업·대학·연구기관 전문 관람객은 전 기간 통합 이용 가능한 All-Access Pass 구매 가능.</div></section><section id="plan"><h2>2. 전시관 배치 개념도</h2><p class="ssub">주최 측이 공개한 관 순서(북→남)와 관별 전시 구성을 존(zone) 단위로 재구성했습니다. 아래 버튼으로 동선을 배치도 위에 겹쳐 볼 수 있습니다.</p><div class="rbtns"><button class="btn on" data-r="0" onclick="showRoute(0,this)">배치도만</button><button class="btn" data-r="1" onclick="showRoute('1',this)" style="border-left:4px solid #e11d48">동선 1 · 휴머노이드 집중</button><button class="btn" data-r="2" onclick="showRoute('2',this)" style="border-left:4px solid #059669">동선 2 · 공급망 &amp; 부품 소싱</button><button class="btn" data-r="3" onclick="showRoute('3',this)" style="border-left:4px solid #2563eb">동선 3 · 응용 도입 검토 (도입 담당자)</button><button class="btn" data-r="4" onclick="showRoute('4',this)" style="border-left:4px solid #7c3aed">동선 4 · 체험 중심</button></div><div class="fpwrap"><svg viewBox="0 0 700 660" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK KR"><line x1="26" y1="40" x2="26" y2="640" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/><polygon points="26,26 21,40 31,40" fill="#64748b"/><text x="26" y="20" font-size="12" font-weight="700" fill="#334155" text-anchor="middle">N</text><text x="26" y="656" font-size="9" fill="#94a3b8" text-anchor="middle">S</text><text x="14" y="340" font-size="10" fill="#64748b" transform="rotate(-90 14 340)" text-anchor="middle">북 → 남 일렬 배치</text><rect x="56" y="34" width="588" height="192" rx="9" fill="#fff1f2" stroke="#e11d48" stroke-width="1.8"/><rect x="56" y="34" width="588" height="26" rx="9" fill="#e11d48"/><rect x="56" y="50" width="588" height="10" fill="#e11d48"/><text x="68" y="52" font-size="12.5" font-weight="700" fill="#ffffff">C관 · 智创馆 (지창관)</text><text x="632" y="52" font-size="9" fill="#ffffff" opacity="0.9" text-anchor="end">휴머노이드 · 구체지능 · 혁신센터  |  신축 2만㎡</text><rect x="64.0" y="68.0" width="186.66666666666666" height="72.0" rx="5" fill="#ffffff" stroke="#e11d48" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="80.0" cy="84.0" r="10" fill="#e11d48"/><text x="80.0" y="88.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">C1</text><text x="96.0" y="88.0" font-size="10" fill="#0f172a">혁신센터 축 (11)</text><rect x="256.66666666666663" y="68.0" width="186.66666666666666" height="72.0" rx="5" fill="#ffffff" stroke="#e11d48" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="272.66666666666663" cy="84.0" r="10" fill="#e11d48"/><text x="272.66666666666663" y="88.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">C2</text><text x="288.66666666666663" y="88.0" font-size="10" fill="#0f172a">휴머노이드 브랜드 축 (25)</text><rect x="449.3333333333333" y="68.0" width="186.66666666666666" height="72.0" rx="5" fill="#ffffff" stroke="#e11d48" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="465.3333333333333" cy="84.0" r="10" fill="#e11d48"/><text x="465.3333333333333" y="88.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">C3</text><text x="481.3333333333333" y="88.0" font-size="10" fill="#0f172a">JD 슈퍼 전시구역</text><rect x="64.0" y="146.0" width="186.66666666666666" height="72.0" rx="5" fill="#ffffff" stroke="#e11d48" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="80.0" cy="162.0" r="10" fill="#e11d48"/><text x="80.0" y="166.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">C4</text><text x="96.0" y="166.0" font-size="10" fill="#0f172a">중앙기업관 (央企)</text><rect x="256.66666666666663" y="146.0" width="186.66666666666666" height="72.0" rx="5" fill="#ffffff" stroke="#e11d48" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="272.66666666666663" cy="162.0" r="10" fill="#e11d48"/><text x="272.66666666666663" y="166.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">C5</text><text x="288.66666666666663" y="166.0" font-size="10" fill="#0f172a">청두 클러스터 (8)</text><rect x="449.3333333333333" y="146.0" width="186.66666666666666" height="72.0" rx="5" fill="#ffffff" stroke="#e11d48" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="465.3333333333333" cy="162.0" r="10" fill="#e11d48"/><text x="465.3333333333333" y="166.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">C6</text><text x="481.3333333333333" y="166.0" font-size="10" fill="#0f172a">우한·후베이 클러스터 (16)</text><rect x="56" y="242" width="588" height="144" rx="9" fill="#ecfdf5" stroke="#059669" stroke-width="1.8"/><rect x="56" y="242" width="588" height="26" rx="9" fill="#059669"/><rect x="56" y="258" width="588" height="10" fill="#059669"/><text x="68" y="260" font-size="12.5" font-weight="700" fill="#ffffff">B관 · 智合馆 (지허관)</text><text x="632" y="260" font-size="9" fill="#ffffff" opacity="0.9" text-anchor="end">국제 협력 · 글로벌 부품 · 한국관</text><rect x="64.0" y="276.0" width="186.66666666666666" height="48.0" rx="5" fill="#ffffff" stroke="#059669" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="80.0" cy="292.0" r="10" fill="#059669"/><text x="80.0" y="296.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">B1</text><text x="96.0" y="296.0" font-size="10" fill="#0f172a">글로벌 기업 축 (22)</text><rect x="256.66666666666663" y="276.0" width="186.66666666666666" height="48.0" rx="5" fill="#ffffff" stroke="#059669" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="272.66666666666663" cy="292.0" r="10" fill="#059669"/><text x="272.66666666666663" y="296.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">B2</text><text x="288.66666666666663" y="296.0" font-size="10" fill="#0f172a">한국관 & 해외 (10)</text><rect x="449.3333333333333" y="276.0" width="186.66666666666666" height="48.0" rx="5" fill="#ffffff" stroke="#059669" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="465.3333333333333" cy="292.0" r="10" fill="#059669"/><text x="465.3333333333333" y="296.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">B3</text><text x="481.3333333333333" y="296.0" font-size="10" fill="#0f172a">중국 완제품·제어 (11)</text><rect x="64.0" y="330.0" width="186.66666666666666" height="48.0" rx="5" fill="#ffffff" stroke="#059669" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="80.0" cy="346.0" r="10" fill="#059669"/><text x="80.0" y="350.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">B4</text><text x="96.0" y="350.0" font-size="10" fill="#0f172a">비전·센서·LiDAR (11)</text><rect x="256.66666666666663" y="330.0" width="186.66666666666666" height="48.0" rx="5" fill="#ffffff" stroke="#059669" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="272.66666666666663" cy="346.0" r="10" fill="#059669"/><text x="272.66666666666663" y="350.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">B5</text><text x="288.66666666666663" y="350.0" font-size="10" fill="#0f172a">손·관절·구동 (13)</text><rect x="449.3333333333333" y="330.0" width="186.66666666666666" height="48.0" rx="5" fill="#ffffff" stroke="#059669" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="465.3333333333333" cy="346.0" r="10" fill="#059669"/><text x="465.3333333333333" y="350.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">B6</text><text x="481.3333333333333" y="350.0" font-size="10" fill="#0f172a">반도체·컴퓨팅 (9)</text><rect x="56" y="402" width="588" height="144" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/><rect x="56" y="402" width="588" height="26" rx="9" fill="#2563eb"/><rect x="56" y="418" width="588" height="10" fill="#2563eb"/><text x="68" y="420" font-size="12.5" font-weight="700" fill="#ffffff">A관 · 智造馆 (지자오관)</text><text x="632" y="420" font-size="9" fill="#ffffff" opacity="0.9" text-anchor="end">상용·산업 응용 · 국산 핵심 부품</text><rect x="64.0" y="436.0" width="186.66666666666666" height="48.0" rx="5" fill="#ffffff" stroke="#2563eb" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="80.0" cy="452.0" r="10" fill="#2563eb"/><text x="80.0" y="456.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">A1</text><text x="96.0" y="456.0" font-size="10" fill="#0f172a">서비스·상용·물류 (11)</text><rect x="256.66666666666663" y="436.0" width="186.66666666666666" height="48.0" rx="5" fill="#ffffff" stroke="#2563eb" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="272.66666666666663" cy="452.0" r="10" fill="#2563eb"/><text x="272.66666666666663" y="456.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">A2</text><text x="288.66666666666663" y="456.0" font-size="10" fill="#0f172a">산업·특수·중공업 (13)</text><rect x="449.3333333333333" y="436.0" width="186.66666666666666" height="48.0" rx="5" fill="#ffffff" stroke="#2563eb" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="465.3333333333333" cy="452.0" r="10" fill="#2563eb"/><text x="465.3333333333333" y="456.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">A3</text><text x="481.3333333333333" y="456.0" font-size="10" fill="#0f172a">의료·재활 (4)</text><rect x="64.0" y="490.0" width="186.66666666666666" height="48.0" rx="5" fill="#ffffff" stroke="#2563eb" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="80.0" cy="506.0" r="10" fill="#2563eb"/><text x="80.0" y="510.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">A4</text><text x="96.0" y="510.0" font-size="10" fill="#0f172a">감속기·모터·구동계 (20)</text><rect x="256.66666666666663" y="490.0" width="186.66666666666666" height="48.0" rx="5" fill="#ffffff" stroke="#2563eb" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="272.66666666666663" cy="506.0" r="10" fill="#2563eb"/><text x="272.66666666666663" y="510.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">A5</text><text x="288.66666666666663" y="510.0" font-size="10" fill="#0f172a">센서·비전·컴퓨팅 (7)</text><rect x="449.3333333333333" y="490.0" width="186.66666666666666" height="48.0" rx="5" fill="#ffffff" stroke="#2563eb" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="465.3333333333333" cy="506.0" r="10" fill="#2563eb"/><text x="465.3333333333333" y="510.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">A6</text><text x="481.3333333333333" y="510.0" font-size="10" fill="#0f172a">연구·지원기관 (4)</text><rect x="56" y="562" width="588" height="84" rx="9" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.8"/><rect x="56" y="562" width="588" height="26" rx="9" fill="#7c3aed"/><rect x="56" y="578" width="588" height="10" fill="#7c3aed"/><text x="68" y="580" font-size="12.5" font-weight="700" fill="#ffffff">D관 · 智趣馆 (지취관) — 임시관 2동</text><text x="632" y="580" font-size="9" fill="#ffffff" opacity="0.9" text-anchor="end">체험 · 퍼포먼스 · 소비자 제품</text><rect x="64.0" y="596.0" width="283.0" height="42.0" rx="5" fill="#ffffff" stroke="#7c3aed" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="80.0" cy="612.0" r="10" fill="#7c3aed"/><text x="80.0" y="616.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">D1</text><text x="96.0" y="616.0" font-size="10" fill="#0f172a">D1 퍼포먼스·체험 (6)</text><rect x="353.0" y="596.0" width="283.0" height="42.0" rx="5" fill="#ffffff" stroke="#7c3aed" stroke-width="0.8" stroke-opacity="0.5"/><circle cx="369.0" cy="612.0" r="10" fill="#7c3aed"/><text x="369.0" y="616.0" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">D2</text><text x="385.0" y="616.0" font-size="10" fill="#0f172a">D2 소비자·교육·부품 (18)</text><line x1="350" y1="226" x2="350" y2="242" stroke="#94a3b8" stroke-width="8" stroke-linecap="round" opacity="0.5"/><line x1="350" y1="386" x2="350" y2="402" stroke="#94a3b8" stroke-width="8" stroke-linecap="round" opacity="0.5"/><line x1="350" y1="546" x2="350" y2="562" stroke="#94a3b8" stroke-width="8" stroke-linecap="round" opacity="0.5"/><text x="366" y="561" font-size="8.5" fill="#94a3b8">D관은 임시관 — 옥외 이동 구간 발생</text><g class="rlayer" id="rlayer-1" style="display:none"><defs><marker id="m1" markerWidth="7" markerHeight="7" refX="5.5" refY="2.6" orient="auto"><path d="M0,0 L5.5,2.6 L0,5.2 z" fill="#e11d48"/></marker></defs><path d="M224.66666666666666,124.0 C224.66666666666666,124.0 417.33333333333326,124.0 417.33333333333326,124.0" stroke="#e11d48" stroke-width="3.4" fill="none" stroke-linecap="round" marker-end="url(#m1)"/><path d="M417.33333333333326,124.0 C417.33333333333326,124.0 610.0,124.0 610.0,124.0" stroke="#e11d48" stroke-width="3.4" fill="none" stroke-linecap="round" marker-end="url(#m1)"/><path d="M610.0,124.0 C610.0,163.0 224.66666666666666,163.0 224.66666666666666,202.0" stroke="#e11d48" stroke-width="3.4" fill="none" stroke-linecap="round" marker-end="url(#m1)"/><circle cx="224.66666666666666" cy="124.0" r="12" fill="#e11d48" stroke="#ffffff" stroke-width="2.2"/><text x="224.66666666666666" y="128.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">1</text><circle cx="417.33333333333326" cy="124.0" r="12" fill="#e11d48" stroke="#ffffff" stroke-width="2.2"/><text x="417.33333333333326" y="128.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">2</text><circle cx="610.0" cy="124.0" r="12" fill="#e11d48" stroke="#ffffff" stroke-width="2.2"/><text x="610.0" y="128.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">3</text><circle cx="224.66666666666666" cy="202.0" r="12" fill="#e11d48" stroke="#ffffff" stroke-width="2.2"/><text x="224.66666666666666" y="206.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">4</text></g><g class="rlayer" id="rlayer-2" style="display:none"><defs><marker id="m2" markerWidth="7" markerHeight="7" refX="5.5" refY="2.6" orient="auto"><path d="M0,0 L5.5,2.6 L0,5.2 z" fill="#059669"/></marker></defs><path d="M224.66666666666666,308.0 C224.66666666666666,308.0 417.33333333333326,308.0 417.33333333333326,308.0" stroke="#059669" stroke-width="3.4" fill="none" stroke-linecap="round" marker-end="url(#m2)"/><path d="M417.33333333333326,308.0 C417.33333333333326,335.0 224.66666666666666,335.0 224.66666666666666,362.0" stroke="#059669" stroke-width="3.4" fill="none" stroke-linecap="round" marker-end="url(#m2)"/><path d="M224.66666666666666,362.0 C224.66666666666666,362.0 417.33333333333326,362.0 417.33333333333326,362.0" stroke="#059669" stroke-width="3.4" fill="none" stroke-linecap="round" marker-end="url(#m2)"/><path d="M417.33333333333326,362.0 C417.33333333333326,442.0 224.66666666666666,442.0 224.66666666666666,522.0" stroke="#059669" stroke-width="3.4" fill="none" stroke-linecap="round" marker-end="url(#m2)"/><path d="M224.66666666666666,522.0 C224.66666666666666,522.0 417.33333333333326,522.0 417.33333333333326,522.0" stroke="#059669" stroke-width="3.4" fill="none" stroke-linecap="round" marker-end="url(#m2)"/><circle cx="224.66666666666666" cy="308.0" r="12" fill="#059669" stroke="#ffffff" stroke-width="2.2"/><text x="224.66666666666666" y="312.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">1</text><circle cx="417.33333333333326" cy="308.0" r="12" fill="#059669" stroke="#ffffff" stroke-width="2.2"/><text x="417.33333333333326" y="312.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">2</text><circle cx="224.66666666666666" cy="362.0" r="12" fill="#059669" stroke="#ffffff" stroke-width="2.2"/><text x="224.66666666666666" y="366.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">3</text><circle cx="417.33333333333326" cy="362.0" r="12" fill="#059669" stroke="#ffffff" stroke-width="2.2"/><text x="417.33333333333326" y="366.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">4</text><circle cx="224.66666666666666" cy="522.0" r="12" fill="#059669" stroke="#ffffff" stroke-width="2.2"/><text x="224.66666666666666" y="526.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">5</text><circle cx="417.33333333333326" cy="522.0" r="12" fill="#059669" stroke="#ffffff" stroke-width="2.2"/><text x="417.33333333333326" y="526.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">6</text></g><g class="rlayer" id="rlayer-3" style="display:none"><defs><marker id="m3" markerWidth="7" markerHeight="7" refX="5.5" refY="2.6" orient="auto"><path d="M0,0 L5.5,2.6 L0,5.2 z" fill="#2563eb"/></marker></defs><path d="M224.66666666666666,468.0 C224.66666666666666,468.0 417.33333333333326,468.0 417.33333333333326,468.0" stroke="#2563eb" stroke-width="3.4" fill="none" stroke-linecap="round" marker-end="url(#m3)"/><path d="M417.33333333333326,468.0 C417.33333333333326,468.0 610.0,468.0 610.0,468.0" stroke="#2563eb" stroke-width="3.4" fill="none" stroke-linecap="round" marker-end="url(#m3)"/><path d="M610.0,468.0 C610.0,296.0 610.0,296.0 610.0,124.0" stroke="#2563eb" stroke-width="3.4" fill="none" stroke-linecap="round" marker-end="url(#m3)"/><path d="M610.0,124.0 C610.0,163.0 224.66666666666666,163.0 224.66666666666666,202.0" stroke="#2563eb" stroke-width="3.4" fill="none" stroke-linecap="round" marker-end="url(#m3)"/><circle cx="224.66666666666666" cy="468.0" r="12" fill="#2563eb" stroke="#ffffff" stroke-width="2.2"/><text x="224.66666666666666" y="472.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">1</text><circle cx="417.33333333333326" cy="468.0" r="12" fill="#2563eb" stroke="#ffffff" stroke-width="2.2"/><text x="417.33333333333326" y="472.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">2</text><circle cx="610.0" cy="468.0" r="12" fill="#2563eb" stroke="#ffffff" stroke-width="2.2"/><text x="610.0" y="472.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">3</text><circle cx="610.0" cy="124.0" r="12" fill="#2563eb" stroke="#ffffff" stroke-width="2.2"/><text x="610.0" y="128.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">4</text><circle cx="224.66666666666666" cy="202.0" r="12" fill="#2563eb" stroke="#ffffff" stroke-width="2.2"/><text x="224.66666666666666" y="206.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">5</text></g><g class="rlayer" id="rlayer-4" style="display:none"><defs><marker id="m4" markerWidth="7" markerHeight="7" refX="5.5" refY="2.6" orient="auto"><path d="M0,0 L5.5,2.6 L0,5.2 z" fill="#7c3aed"/></marker></defs><path d="M321.0,622.0 C321.0,622.0 610.0,622.0 610.0,622.0" stroke="#7c3aed" stroke-width="3.4" fill="none" stroke-linecap="round" marker-end="url(#m4)"/><path d="M610.0,622.0 C610.0,545.0 224.66666666666666,545.0 224.66666666666666,468.0" stroke="#7c3aed" stroke-width="3.4" fill="none" stroke-linecap="round" marker-end="url(#m4)"/><path d="M224.66666666666666,468.0 C224.66666666666666,296.0 417.33333333333326,296.0 417.33333333333326,124.0" stroke="#7c3aed" stroke-width="3.4" fill="none" stroke-linecap="round" marker-end="url(#m4)"/><circle cx="321.0" cy="622.0" r="12" fill="#7c3aed" stroke="#ffffff" stroke-width="2.2"/><text x="321.0" y="626.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">1</text><circle cx="610.0" cy="622.0" r="12" fill="#7c3aed" stroke="#ffffff" stroke-width="2.2"/><text x="610.0" y="626.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">2</text><circle cx="224.66666666666666" cy="468.0" r="12" fill="#7c3aed" stroke="#ffffff" stroke-width="2.2"/><text x="224.66666666666666" y="472.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">3</text><circle cx="417.33333333333326" cy="124.0" r="12" fill="#7c3aed" stroke="#ffffff" stroke-width="2.2"/><text x="417.33333333333326" y="128.4" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">4</text></g></svg></div><div class="tip" style="margin-top:10px">공식 배치도(展位图)를 그대로 옮긴 것이 아니라 관 순서·구성 정보로 재구성한 개념도입니다. 존 코드(C1~C6, B1~B6, A1~A6, D1·D2)는 동선에서 그대로 사용합니다. 개별 부스 번호와 통로는 현장 배치도를 확인하세요.</div></section><section id="routes"><h2>3. 배치도 기반 추천 동선</h2><p class="ssub">4개 관이 북→남 일렬 배치라는 점을 활용해, 되돌아오는 구간을 최소화한 4가지 동선입니다.</p><div class="route"><div><svg viewBox="0 0 210 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK KR"><defs><marker id="are11d48" markerWidth="7" markerHeight="7" refX="5.5" refY="2.6" orient="auto"><path d="M0,0 L5.5,2.6 L0,5.2 z" fill="#e11d48"/></marker></defs><rect x="6" y="14" width="198" height="86" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1.4"/><rect x="6" y="14" width="198" height="15" rx="6" fill="#e11d48" opacity="1"/><rect x="6" y="22" width="198" height="7" fill="#e11d48" opacity="1"/><text x="12" y="25.5" font-size="9" font-weight="700" fill="#ffffff">C관</text><rect x="14.0" y="33.0" width="56.666666666666664" height="26.5" rx="3" fill="#ffffff" stroke="#e11d48" stroke-width="1.1"/><text x="42.33333333333333" y="49.25" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">C1</text><rect x="76.66666666666666" y="33.0" width="56.666666666666664" height="26.5" rx="3" fill="#ffffff" stroke="#e11d48" stroke-width="1.1"/><text x="104.99999999999999" y="49.25" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">C2</text><rect x="139.33333333333331" y="33.0" width="56.666666666666664" height="26.5" rx="3" fill="#ffffff" stroke="#e11d48" stroke-width="1.1"/><text x="167.66666666666666" y="49.25" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">C3</text><rect x="14.0" y="65.5" width="56.666666666666664" height="26.5" rx="3" fill="#ffffff" stroke="#e11d48" stroke-width="1.1"/><text x="42.33333333333333" y="81.75" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">C4</text><rect x="76.66666666666666" y="65.5" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="81.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C5</text><rect x="139.33333333333331" y="65.5" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="81.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C6</text><rect x="6" y="108" width="198" height="74" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8"/><rect x="6" y="108" width="198" height="15" rx="6" fill="#059669" opacity="0.35"/><rect x="6" y="116" width="198" height="7" fill="#059669" opacity="0.35"/><text x="12" y="119.5" font-size="9" font-weight="700" fill="#ffffff">B관</text><rect x="14.0" y="127.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="42.33333333333333" y="140.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B1</text><rect x="76.66666666666666" y="127.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="140.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B2</text><rect x="139.33333333333331" y="127.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="140.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B3</text><rect x="14.0" y="153.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="42.33333333333333" y="166.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B4</text><rect x="76.66666666666666" y="153.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="166.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B5</text><rect x="139.33333333333331" y="153.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="166.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B6</text><rect x="6" y="190" width="198" height="74" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8"/><rect x="6" y="190" width="198" height="15" rx="6" fill="#2563eb" opacity="0.35"/><rect x="6" y="198" width="198" height="7" fill="#2563eb" opacity="0.35"/><text x="12" y="201.5" font-size="9" font-weight="700" fill="#ffffff">A관</text><rect x="14.0" y="209.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="42.33333333333333" y="222.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A1</text><rect x="76.66666666666666" y="209.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="222.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A2</text><rect x="139.33333333333331" y="209.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="222.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A3</text><rect x="14.0" y="235.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="42.33333333333333" y="248.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A4</text><rect x="76.66666666666666" y="235.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="248.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A5</text><rect x="139.33333333333331" y="235.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="248.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A6</text><rect x="6" y="272" width="198" height="26" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8"/><rect x="6" y="272" width="198" height="15" rx="6" fill="#7c3aed" opacity="0.35"/><rect x="6" y="280" width="198" height="7" fill="#7c3aed" opacity="0.35"/><text x="12" y="283.5" font-size="9" font-weight="700" fill="#ffffff">D관</text><rect x="14.0" y="291.0" width="88.0" height="-1.0" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="58.0" y="293.5" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">D1</text><rect x="108.0" y="291.0" width="88.0" height="-1.0" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="152.0" y="293.5" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">D2</text><path d="M42.33333333333333,46.25 C73.66666666666666,46.25 73.66666666666666,46.25 104.99999999999999,46.25" stroke="#e11d48" stroke-width="2.6" fill="none" opacity="1" marker-end="url(#are11d48)"/><path d="M104.99999999999999,46.25 C136.33333333333331,46.25 136.33333333333331,46.25 167.66666666666666,46.25" stroke="#e11d48" stroke-width="2.6" fill="none" opacity="1" marker-end="url(#are11d48)"/><path d="M167.66666666666666,46.25 C105.0,46.25 105.0,78.75 42.33333333333333,78.75" stroke="#e11d48" stroke-width="2.6" fill="none" opacity="1" marker-end="url(#are11d48)"/><circle cx="42.33333333333333" cy="46.25" r="9.5" fill="#e11d48" stroke="#ffffff" stroke-width="1.8"/><text x="42.33333333333333" y="49.85" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">1</text><circle cx="104.99999999999999" cy="46.25" r="9.5" fill="#e11d48" stroke="#ffffff" stroke-width="1.8"/><text x="104.99999999999999" y="49.85" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">2</text><circle cx="167.66666666666666" cy="46.25" r="9.5" fill="#e11d48" stroke="#ffffff" stroke-width="1.8"/><text x="167.66666666666666" y="49.85" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">3</text><circle cx="42.33333333333333" cy="78.75" r="9.5" fill="#e11d48" stroke="#ffffff" stroke-width="1.8"/><text x="42.33333333333333" y="82.35" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">4</text></svg></div><div><div><span class="rnum" style="background:#e11d48">1</span><b style="font-size:15px">반나절 · 휴머노이드 집중</b></div><div class="rpath">동선: C관 단일 집중 (약 3~4시간)</div><ol><li>북측 입구 → C관 진입 (신축관, 동선이 넓어 체류 시간 대비 효율 높음)</li><li>① 혁신센터 축: 국가-지방 공동 → 베이징 → 상하이/저장/후베이/광둥/쓰촨/지린 순서로 일렬 관람</li><li>② 브랜드 축: Unitree → UBTECH → Galbot → Fourier → LimX Dynamics(Luna 군집 시연) → Magiclab</li><li>③ 특설 구역: JD 슈퍼 전시구역 → 중앙기업관</li><li>시간이 남으면 C관 남단에서 B관으로 바로 연결</li></ol><div class="tip">혼잡 회피: 시연 로봇은 오전 첫 회차가 가장 안정적. Luna 군집 공연·Tiangong Omni는 회차 시간 사전 확인</div></div></div><div class="route"><div><svg viewBox="0 0 210 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK KR"><defs><marker id="ar059669" markerWidth="7" markerHeight="7" refX="5.5" refY="2.6" orient="auto"><path d="M0,0 L5.5,2.6 L0,5.2 z" fill="#059669"/></marker></defs><rect x="6" y="14" width="198" height="86" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8"/><rect x="6" y="14" width="198" height="15" rx="6" fill="#e11d48" opacity="0.35"/><rect x="6" y="22" width="198" height="7" fill="#e11d48" opacity="0.35"/><text x="12" y="25.5" font-size="9" font-weight="700" fill="#ffffff">C관</text><rect x="14.0" y="33.0" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="42.33333333333333" y="49.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C1</text><rect x="76.66666666666666" y="33.0" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="49.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C2</text><rect x="139.33333333333331" y="33.0" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="49.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C3</text><rect x="14.0" y="65.5" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="42.33333333333333" y="81.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C4</text><rect x="76.66666666666666" y="65.5" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="81.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C5</text><rect x="139.33333333333331" y="65.5" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="81.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C6</text><rect x="6" y="108" width="198" height="74" rx="6" fill="#ecfdf5" stroke="#059669" stroke-width="1.4"/><rect x="6" y="108" width="198" height="15" rx="6" fill="#059669" opacity="1"/><rect x="6" y="116" width="198" height="7" fill="#059669" opacity="1"/><text x="12" y="119.5" font-size="9" font-weight="700" fill="#ffffff">B관</text><rect x="14.0" y="127.0" width="56.666666666666664" height="20.5" rx="3" fill="#ffffff" stroke="#059669" stroke-width="1.1"/><text x="42.33333333333333" y="140.25" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">B1</text><rect x="76.66666666666666" y="127.0" width="56.666666666666664" height="20.5" rx="3" fill="#ffffff" stroke="#059669" stroke-width="1.1"/><text x="104.99999999999999" y="140.25" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">B2</text><rect x="139.33333333333331" y="127.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="140.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B3</text><rect x="14.0" y="153.5" width="56.666666666666664" height="20.5" rx="3" fill="#ffffff" stroke="#059669" stroke-width="1.1"/><text x="42.33333333333333" y="166.75" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">B4</text><rect x="76.66666666666666" y="153.5" width="56.666666666666664" height="20.5" rx="3" fill="#ffffff" stroke="#059669" stroke-width="1.1"/><text x="104.99999999999999" y="166.75" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">B5</text><rect x="139.33333333333331" y="153.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="166.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B6</text><rect x="6" y="190" width="198" height="74" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/><rect x="6" y="190" width="198" height="15" rx="6" fill="#2563eb" opacity="1"/><rect x="6" y="198" width="198" height="7" fill="#2563eb" opacity="1"/><text x="12" y="201.5" font-size="9" font-weight="700" fill="#ffffff">A관</text><rect x="14.0" y="209.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="42.33333333333333" y="222.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A1</text><rect x="76.66666666666666" y="209.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="222.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A2</text><rect x="139.33333333333331" y="209.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="222.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A3</text><rect x="14.0" y="235.5" width="56.666666666666664" height="20.5" rx="3" fill="#ffffff" stroke="#059669" stroke-width="1.1"/><text x="42.33333333333333" y="248.75" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">A4</text><rect x="76.66666666666666" y="235.5" width="56.666666666666664" height="20.5" rx="3" fill="#ffffff" stroke="#059669" stroke-width="1.1"/><text x="104.99999999999999" y="248.75" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">A5</text><rect x="139.33333333333331" y="235.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="248.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A6</text><rect x="6" y="272" width="198" height="26" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8"/><rect x="6" y="272" width="198" height="15" rx="6" fill="#7c3aed" opacity="0.35"/><rect x="6" y="280" width="198" height="7" fill="#7c3aed" opacity="0.35"/><text x="12" y="283.5" font-size="9" font-weight="700" fill="#ffffff">D관</text><rect x="14.0" y="291.0" width="88.0" height="-1.0" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="58.0" y="293.5" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">D1</text><rect x="108.0" y="291.0" width="88.0" height="-1.0" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="152.0" y="293.5" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">D2</text><path d="M42.33333333333333,137.25 C73.66666666666666,137.25 73.66666666666666,137.25 104.99999999999999,137.25" stroke="#059669" stroke-width="2.6" fill="none" opacity="1" marker-end="url(#ar059669)"/><path d="M104.99999999999999,137.25 C73.66666666666666,137.25 73.66666666666666,163.75 42.33333333333333,163.75" stroke="#059669" stroke-width="2.6" fill="none" opacity="1" marker-end="url(#ar059669)"/><path d="M42.33333333333333,163.75 C73.66666666666666,163.75 73.66666666666666,163.75 104.99999999999999,163.75" stroke="#059669" stroke-width="2.6" fill="none" opacity="1" marker-end="url(#ar059669)"/><path d="M104.99999999999999,163.75 C73.66666666666666,163.75 73.66666666666666,245.75 42.33333333333333,245.75" stroke="#059669" stroke-width="2.6" fill="none" opacity="1" marker-end="url(#ar059669)"/><path d="M42.33333333333333,245.75 C73.66666666666666,245.75 73.66666666666666,245.75 104.99999999999999,245.75" stroke="#059669" stroke-width="2.6" fill="none" opacity="1" marker-end="url(#ar059669)"/><circle cx="42.33333333333333" cy="137.25" r="9.5" fill="#059669" stroke="#ffffff" stroke-width="1.8"/><text x="42.33333333333333" y="140.85" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">1</text><circle cx="104.99999999999999" cy="137.25" r="9.5" fill="#059669" stroke="#ffffff" stroke-width="1.8"/><text x="104.99999999999999" y="140.85" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">2</text><circle cx="42.33333333333333" cy="163.75" r="9.5" fill="#059669" stroke="#ffffff" stroke-width="1.8"/><text x="42.33333333333333" y="167.35" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">3</text><circle cx="104.99999999999999" cy="163.75" r="9.5" fill="#059669" stroke="#ffffff" stroke-width="1.8"/><text x="104.99999999999999" y="167.35" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">4</text><circle cx="42.33333333333333" cy="245.75" r="9.5" fill="#059669" stroke="#ffffff" stroke-width="1.8"/><text x="42.33333333333333" y="249.35" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">5</text><circle cx="104.99999999999999" cy="245.75" r="9.5" fill="#059669" stroke="#ffffff" stroke-width="1.8"/><text x="104.99999999999999" y="249.35" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">6</text></svg></div><div><div><span class="rnum" style="background:#059669">2</span><b style="font-size:15px">하루 · 공급망 &amp; 부품 소싱</b></div><div class="rpath">동선: B관 → A관 (남향 연속 이동)</div><ol><li>B관 글로벌 축부터: AMD → Infineon → Realtek/RealSense → maxon → FAULHABER → Harmonic Drive → Schaeffler → NSK → igus → MISUMI → Henkel/3M</li><li>이어서 한국관: 로보티즈(AI Sapiens) → 뉴로메카 → 뉴빌리티 → 솔리드뷰 → SENES → AidALL → Dynamic Solution</li><li>B관 센서 축: Hesai → Orbbec → ZVISION → Slamtec → 柯力/鑫精诚/他山</li><li>B관 손·관절 축: 灵心巧手 → 因时 → 兆威 → 强脑 → 大寰 → 帕西尼</li><li>남쪽 A관으로 이동해 국산 감속기·모터 축: 绿的谐波 → 来福 → 科峰 → 鸣志 → 雷赛 → 新剑 → 清能德创 → 本末动力</li><li>A관 센서 보완: Livox(A관 배치)</li></ol><div class="tip">B관(글로벌)→A관(국산) 순서로 보면 같은 부품군의 가격·성능 대체안을 바로 교차 검증할 수 있음. 8/20 구매상담의 날과 겹치면 매칭 세션 병행</div></div></div><div class="route"><div><svg viewBox="0 0 210 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK KR"><defs><marker id="ar2563eb" markerWidth="7" markerHeight="7" refX="5.5" refY="2.6" orient="auto"><path d="M0,0 L5.5,2.6 L0,5.2 z" fill="#2563eb"/></marker></defs><rect x="6" y="14" width="198" height="86" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1.4"/><rect x="6" y="14" width="198" height="15" rx="6" fill="#e11d48" opacity="1"/><rect x="6" y="22" width="198" height="7" fill="#e11d48" opacity="1"/><text x="12" y="25.5" font-size="9" font-weight="700" fill="#ffffff">C관</text><rect x="14.0" y="33.0" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="42.33333333333333" y="49.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C1</text><rect x="76.66666666666666" y="33.0" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="49.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C2</text><rect x="139.33333333333331" y="33.0" width="56.666666666666664" height="26.5" rx="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.1"/><text x="167.66666666666666" y="49.25" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">C3</text><rect x="14.0" y="65.5" width="56.666666666666664" height="26.5" rx="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.1"/><text x="42.33333333333333" y="81.75" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">C4</text><rect x="76.66666666666666" y="65.5" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="81.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C5</text><rect x="139.33333333333331" y="65.5" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="81.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C6</text><rect x="6" y="108" width="198" height="74" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8"/><rect x="6" y="108" width="198" height="15" rx="6" fill="#059669" opacity="0.35"/><rect x="6" y="116" width="198" height="7" fill="#059669" opacity="0.35"/><text x="12" y="119.5" font-size="9" font-weight="700" fill="#ffffff">B관</text><rect x="14.0" y="127.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="42.33333333333333" y="140.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B1</text><rect x="76.66666666666666" y="127.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="140.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B2</text><rect x="139.33333333333331" y="127.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="140.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B3</text><rect x="14.0" y="153.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="42.33333333333333" y="166.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B4</text><rect x="76.66666666666666" y="153.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="166.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B5</text><rect x="139.33333333333331" y="153.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="166.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B6</text><rect x="6" y="190" width="198" height="74" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/><rect x="6" y="190" width="198" height="15" rx="6" fill="#2563eb" opacity="1"/><rect x="6" y="198" width="198" height="7" fill="#2563eb" opacity="1"/><text x="12" y="201.5" font-size="9" font-weight="700" fill="#ffffff">A관</text><rect x="14.0" y="209.0" width="56.666666666666664" height="20.5" rx="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.1"/><text x="42.33333333333333" y="222.25" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">A1</text><rect x="76.66666666666666" y="209.0" width="56.666666666666664" height="20.5" rx="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.1"/><text x="104.99999999999999" y="222.25" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">A2</text><rect x="139.33333333333331" y="209.0" width="56.666666666666664" height="20.5" rx="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.1"/><text x="167.66666666666666" y="222.25" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">A3</text><rect x="14.0" y="235.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="42.33333333333333" y="248.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A4</text><rect x="76.66666666666666" y="235.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="248.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A5</text><rect x="139.33333333333331" y="235.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="248.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A6</text><rect x="6" y="272" width="198" height="26" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8"/><rect x="6" y="272" width="198" height="15" rx="6" fill="#7c3aed" opacity="0.35"/><rect x="6" y="280" width="198" height="7" fill="#7c3aed" opacity="0.35"/><text x="12" y="283.5" font-size="9" font-weight="700" fill="#ffffff">D관</text><rect x="14.0" y="291.0" width="88.0" height="-1.0" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="58.0" y="293.5" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">D1</text><rect x="108.0" y="291.0" width="88.0" height="-1.0" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="152.0" y="293.5" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">D2</text><path d="M42.33333333333333,219.25 C73.66666666666666,219.25 73.66666666666666,219.25 104.99999999999999,219.25" stroke="#2563eb" stroke-width="2.6" fill="none" opacity="1" marker-end="url(#ar2563eb)"/><path d="M104.99999999999999,219.25 C136.33333333333331,219.25 136.33333333333331,219.25 167.66666666666666,219.25" stroke="#2563eb" stroke-width="2.6" fill="none" opacity="1" marker-end="url(#ar2563eb)"/><path d="M167.66666666666666,219.25 C167.66666666666666,219.25 167.66666666666666,46.25 167.66666666666666,46.25" stroke="#2563eb" stroke-width="2.6" fill="none" opacity="1" marker-end="url(#ar2563eb)"/><path d="M167.66666666666666,46.25 C105.0,46.25 105.0,78.75 42.33333333333333,78.75" stroke="#2563eb" stroke-width="2.6" fill="none" opacity="1" marker-end="url(#ar2563eb)"/><circle cx="42.33333333333333" cy="219.25" r="9.5" fill="#2563eb" stroke="#ffffff" stroke-width="1.8"/><text x="42.33333333333333" y="222.85" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">1</text><circle cx="104.99999999999999" cy="219.25" r="9.5" fill="#2563eb" stroke="#ffffff" stroke-width="1.8"/><text x="104.99999999999999" y="222.85" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">2</text><circle cx="167.66666666666666" cy="219.25" r="9.5" fill="#2563eb" stroke="#ffffff" stroke-width="1.8"/><text x="167.66666666666666" y="222.85" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">3</text><circle cx="167.66666666666666" cy="46.25" r="9.5" fill="#2563eb" stroke="#ffffff" stroke-width="1.8"/><text x="167.66666666666666" y="49.85" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">4</text><circle cx="42.33333333333333" cy="78.75" r="9.5" fill="#2563eb" stroke="#ffffff" stroke-width="1.8"/><text x="42.33333333333333" y="82.35" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">5</text></svg></div><div><div><span class="rnum" style="background:#2563eb">3</span><b style="font-size:15px">하루 · 응용 도입 검토 (도입 담당자)</b></div><div class="rpath">동선: A관 → C관 (역방향 북상)</div><ol><li>A관 서비스 축: KEENON → PUDU → 云迹 → Ecovacs → Haier → 美丽魔方 (서빙·배달·청소·가정)</li><li>A관 산업 축: Flexiv → ROKAE → Fairino → 新时达 → 中信重工 → 国兴智能 → 申昊 (제조·순찰·특수)</li><li>A관 의료 축: 长木谷(ROPA6) → 强联智创 → 程天科技 → 中电科机器人</li><li>북상하여 C관 JD 슈퍼 전시구역에서 물류·리테일·산업·가사 통합 시나리오 확인</li><li>마무리로 C관 중앙기업관에서 국유기업 도입 사례 12개 현장 확인</li></ol><div class="tip">실제 도입 사례 → 완제품 사양 → 통합 운영 순서로 보면 견적 협의에 필요한 정보가 자연스럽게 축적됨</div></div></div><div class="route"><div><svg viewBox="0 0 210 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK KR"><defs><marker id="ar7c3aed" markerWidth="7" markerHeight="7" refX="5.5" refY="2.6" orient="auto"><path d="M0,0 L5.5,2.6 L0,5.2 z" fill="#7c3aed"/></marker></defs><rect x="6" y="14" width="198" height="86" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1.4"/><rect x="6" y="14" width="198" height="15" rx="6" fill="#e11d48" opacity="1"/><rect x="6" y="22" width="198" height="7" fill="#e11d48" opacity="1"/><text x="12" y="25.5" font-size="9" font-weight="700" fill="#ffffff">C관</text><rect x="14.0" y="33.0" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="42.33333333333333" y="49.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C1</text><rect x="76.66666666666666" y="33.0" width="56.666666666666664" height="26.5" rx="3" fill="#ffffff" stroke="#7c3aed" stroke-width="1.1"/><text x="104.99999999999999" y="49.25" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">C2</text><rect x="139.33333333333331" y="33.0" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="49.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C3</text><rect x="14.0" y="65.5" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="42.33333333333333" y="81.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C4</text><rect x="76.66666666666666" y="65.5" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="81.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C5</text><rect x="139.33333333333331" y="65.5" width="56.666666666666664" height="26.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="81.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">C6</text><rect x="6" y="108" width="198" height="74" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8"/><rect x="6" y="108" width="198" height="15" rx="6" fill="#059669" opacity="0.35"/><rect x="6" y="116" width="198" height="7" fill="#059669" opacity="0.35"/><text x="12" y="119.5" font-size="9" font-weight="700" fill="#ffffff">B관</text><rect x="14.0" y="127.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="42.33333333333333" y="140.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B1</text><rect x="76.66666666666666" y="127.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="140.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B2</text><rect x="139.33333333333331" y="127.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="140.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B3</text><rect x="14.0" y="153.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="42.33333333333333" y="166.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B4</text><rect x="76.66666666666666" y="153.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="166.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B5</text><rect x="139.33333333333331" y="153.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="166.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">B6</text><rect x="6" y="190" width="198" height="74" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/><rect x="6" y="190" width="198" height="15" rx="6" fill="#2563eb" opacity="1"/><rect x="6" y="198" width="198" height="7" fill="#2563eb" opacity="1"/><text x="12" y="201.5" font-size="9" font-weight="700" fill="#ffffff">A관</text><rect x="14.0" y="209.0" width="56.666666666666664" height="20.5" rx="3" fill="#ffffff" stroke="#7c3aed" stroke-width="1.1"/><text x="42.33333333333333" y="222.25" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">A1</text><rect x="76.66666666666666" y="209.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="222.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A2</text><rect x="139.33333333333331" y="209.0" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="222.25" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A3</text><rect x="14.0" y="235.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="42.33333333333333" y="248.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A4</text><rect x="76.66666666666666" y="235.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="104.99999999999999" y="248.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A5</text><rect x="139.33333333333331" y="235.5" width="56.666666666666664" height="20.5" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.6"/><text x="167.66666666666666" y="248.75" font-size="8.5" font-weight="400" fill="#cbd5e1" text-anchor="middle">A6</text><rect x="6" y="272" width="198" height="26" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.4"/><rect x="6" y="272" width="198" height="15" rx="6" fill="#7c3aed" opacity="1"/><rect x="6" y="280" width="198" height="7" fill="#7c3aed" opacity="1"/><text x="12" y="283.5" font-size="9" font-weight="700" fill="#ffffff">D관</text><rect x="14.0" y="291.0" width="88.0" height="-1.0" rx="3" fill="#ffffff" stroke="#7c3aed" stroke-width="1.1"/><text x="58.0" y="293.5" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">D1</text><rect x="108.0" y="291.0" width="88.0" height="-1.0" rx="3" fill="#ffffff" stroke="#7c3aed" stroke-width="1.1"/><text x="152.0" y="293.5" font-size="8.5" font-weight="700" fill="#0f172a" text-anchor="middle">D2</text><path d="M58.0,290.5 C105.0,290.5 105.0,290.5 152.0,290.5" stroke="#7c3aed" stroke-width="2.6" fill="none" opacity="1" marker-end="url(#ar7c3aed)"/><path d="M152.0,290.5 C97.16666666666666,290.5 97.16666666666666,219.25 42.33333333333333,219.25" stroke="#7c3aed" stroke-width="2.6" fill="none" opacity="1" marker-end="url(#ar7c3aed)"/><path d="M42.33333333333333,219.25 C73.66666666666666,219.25 73.66666666666666,46.25 104.99999999999999,46.25" stroke="#7c3aed" stroke-width="2.6" fill="none" opacity="1" marker-end="url(#ar7c3aed)"/><circle cx="58.0" cy="290.5" r="9.5" fill="#7c3aed" stroke="#ffffff" stroke-width="1.8"/><text x="58.0" y="294.1" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">1</text><circle cx="152.0" cy="290.5" r="9.5" fill="#7c3aed" stroke="#ffffff" stroke-width="1.8"/><text x="152.0" y="294.1" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">2</text><circle cx="42.33333333333333" cy="219.25" r="9.5" fill="#7c3aed" stroke="#ffffff" stroke-width="1.8"/><text x="42.33333333333333" y="222.85" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">3</text><circle cx="104.99999999999999" cy="46.25" r="9.5" fill="#7c3aed" stroke="#ffffff" stroke-width="1.8"/><text x="104.99999999999999" y="49.85" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">4</text></svg></div><div><div><span class="rnum" style="background:#7c3aed">4</span><b style="font-size:15px">가족 · 체험 중심</b></div><div class="rpath">동선: D관 → A관 → C관 (남→북)</div><ol><li>남측 D관(임시관 2동)에서 시작: 加速进化 · 莫刻机器人 · 泓柯智行 로봇 퍼포먼스</li><li>안노(安诺) AI 아이스크림 부스, 陆吾智能 데스크톱 로봇, 心言 가정 동반 로봇 체험</li><li>大象机器人 · 松灵 · 穿山甲 등 교육·이동 로봇 체험</li><li>북상하여 A관 서비스 로봇(서빙·청소) 체험 후 C관 휴머노이드 시연 관람</li><li>로봇 쇼핑 스트리트(로봇 셰프 조리·굿즈)와 BCI 뇌제어 로봇 체험 세션 병행</li></ol><div class="tip">D관은 임시관이라 옥외 이동 구간이 발생 — 더위·비 대비 필요. 주말(8/22~23)은 혼잡하므로 개장 직후 입장 권장</div></div></div></section><section id="halls"><h2>4. 4개 전시관별 출품 기업</h2><p class="ssub">WRC 공식 전시업체 명부(A/B/C관) 및 주최 측 보도자료(D관) 기준. <b style="color:#b45309">노란색 칩</b>을 클릭하면 상세 정보가 열립니다.</p><div class="rbtns"><button class="btn on" data-h="all" onclick="filterHall('all',this)">전체</button><button class="btn" data-h="C관" onclick="filterHall('C관',this)" style="border-left:4px solid #e11d48">C관 智创馆</button><button class="btn" data-h="B관" onclick="filterHall('B관',this)" style="border-left:4px solid #059669">B관 智合馆</button><button class="btn" data-h="A관" onclick="filterHall('A관',this)" style="border-left:4px solid #2563eb">A관 智造馆</button><button class="btn" data-h="D관" onclick="filterHall('D관',this)" style="border-left:4px solid #7c3aed">D관 智趣馆</button></div><div class="hallblk" data-hall="C관"><div class="hallhead" style="background:#e11d48"><div><div class="c">C관 · 智创馆 (지창관)</div><div class="n">Smart Innovation Hall</div></div><div class="p">북쪽 1번째 · 신축 2만㎡</div></div><div class="hallbox"><p class="halldesc">올해 신축된 최대 규모 전시관. 휴머노이드 완제품, 구체지능(Embodied AI), 전국 인형로봇 혁신센터, 중앙기업관, JD 슈퍼 전시구역이 집결한 이번 대회의 핵심관.</p><div class="cats"><div class="cat" data-cat="인형로봇 혁신센터 / 연구기관"><div class="catname">인형로봇 혁신센터 / 연구기관 <span style="color:var(--mut);font-weight:400">(11)</span></div><div class="chips"><span class="chip">국가-지방 공동 인형로봇 혁신센터</span><span class="chip f" data-i="1" onclick="openM(1)">★ 베이징 인형로봇 혁신센터</span><span class="chip">저장 인형로봇 혁신센터</span><span class="chip">후베이 인형로봇 혁신센터</span><span class="chip">광둥 구체지능로봇 혁신센터</span><span class="chip">청두 인형로봇 혁신센터</span><span class="chip">지린 바이오닉로봇 혁신센터</span><span class="chip">항저우 위항 하이촹 인형로봇 산업혁신센터</span><span class="chip">선전 인공지능·로봇연구원 (AIRS)</span><span class="chip">베이징 범용인공지능연구원 (BIGAI)</span><span class="chip">장화이 첨단기술 협동혁신센터</span></div></div><div class="cat" data-cat="휴머노이드 &amp; 구체지능 대표 브랜드"><div class="catname">휴머노이드 &amp; 구체지능 대표 브랜드 <span style="color:var(--mut);font-weight:400">(25)</span></div><div class="chips"><span class="chip f" data-i="2" onclick="openM(2)">★ Unitree Robotics (宇树/유니트리)</span><span class="chip f" data-i="5" onclick="openM(5)">★ UBTECH Robotics (优必选)</span><span class="chip">Galbot (银河通用)</span><span class="chip">Fourier Intelligence (傅利叶)</span><span class="chip f" data-i="3" onclick="openM(3)">★ LimX Dynamics (逐际动力)</span><span class="chip">Astribot (星尘智能)</span><span class="chip f" data-i="4" onclick="openM(4)">★ Xinghaitu (星海图)</span><span class="chip f" data-i="6" onclick="openM(6)">★ Magiclab (魔法原子)</span><span class="chip">Deep Robotics (云深处)</span><span class="chip">Vbot / Vita Dynamics (维他动力)</span><span class="chip">Dobot (越疆)</span><span class="chip">iFLYTEK (科大讯飞)</span><span class="chip">AI² Robotics (智平方)</span><span class="chip">X Square Robot (自变量)</span><span class="chip f" data-i="8" onclick="openM(8)">★ Zhishen Innovation (智身新创)</span><span class="chip">Lumos Robotics (鹿明)</span><span class="chip">DexForce (跨维)</span><span class="chip">Seer Intelligent (仙工)</span><span class="chip">Zhongke Huiling (中科혜灵)</span><span class="chip">Simple AI (深朴智能)</span><span class="chip">GigaAI (极佳视界)</span><span class="chip">Guanglun AI (光轮智能)</span><span class="chip">Ant Lingbo (蚂蚁灵波)</span><span class="chip">HARIBIT (理工华汇)</span><span class="chip">Digit Huaxia (数字华夏)</span></div></div><div class="cat" data-cat="특설 전시구역"><div class="catname">특설 전시구역 <span style="color:var(--mut);font-weight:400">(3)</span></div><div class="chips"><span class="chip f" data-i="0" onclick="openM(0)">★ JD.com (京东) 슈퍼 전시구역 — 未来人机共生新范式</span><span class="chip">중앙기업관 (央企展区)</span><span class="chip">병기장비그룹 자동화연구소</span></div></div><div class="cat" data-cat="청두 클러스터"><div class="catname">청두 클러스터 <span style="color:var(--mut);font-weight:400">(8)</span></div><div class="chips"><span class="chip">Chengdu CRP Robot (卡诺普)</span><span class="chip">Chengdu Aerospace Kate (航天凯特)</span><span class="chip">Chengdu Eventec (越凡创新)</span><span class="chip">Sinovai Robotics (天绛芯华)</span><span class="chip">Chengdu Jinfa Edge Intelligence</span><span class="chip">Chengdu LEEN Automation</span><span class="chip">REACH Machinery (瑞迪智驱)</span><span class="chip">신두 뤼콩 농업서비스</span></div></div><div class="cat" data-cat="우한 / 후베이 클러스터"><div class="catname">우한 / 후베이 클러스터 <span style="color:var(--mut);font-weight:400">(16)</span></div><div class="chips"><span class="chip">Wuhan Optics Valley Haribit (光谷华汇)</span><span class="chip">Optics Valley Dongzhi (光谷东智)</span><span class="chip">Hubei Jingchu Humanoid (荆楚)</span><span class="chip">Hubei Maxnova (光谷盛创)</span><span class="chip">Hubei Qirobotics (启灵)</span><span class="chip">Wuhan HandX (手智创新)</span><span class="chip">Wuhan Gelanruo (格蓝若)</span><span class="chip">Latent Space Intelligent (潜空间)</span><span class="chip">Wuhan Vanjee Optoelectronic (万集광전)</span><span class="chip">Wuhan Yesense (元生창신)</span><span class="chip">Zhidongli Robotics (智动力)</span><span class="chip">Wuhan Fanzhou Harmonic (泛洲谐波)</span><span class="chip">LIGHTEKTON (灵途传感)</span><span class="chip">Summit Precision (东方骏驰)</span><span class="chip">Hubei KAIT</span><span class="chip">Wuhan Langyi Robotics (朗毅)</span></div></div></div></div></div><div class="hallblk" data-hall="B관"><div class="hallhead" style="background:#059669"><div><div class="c">B관 · 智合馆 (지허관)</div><div class="n">Smart Integration Hall</div></div><div class="p">북쪽 2번째</div></div><div class="hallbox"><p class="halldesc">국내외 산업 역량이 만나는 국제 협력관. 글로벌 반도체·구동·자동화 기업과 한국관이 위치하며, 센서·감속기·손(hand) 등 핵심 부품 소싱의 중심.</p><div class="cats"><div class="cat" data-cat="글로벌 기업 (반도체·구동·자동화)"><div class="catname">글로벌 기업 (반도체·구동·자동화) <span style="color:var(--mut);font-weight:400">(22)</span></div><div class="chips"><span class="chip f" data-i="14" onclick="openM(14)">★ AMD</span><span class="chip">Infineon Technologies (China)</span><span class="chip">3M China</span><span class="chip">Realtek Semiconductor</span><span class="chip">RealSense</span><span class="chip">NSK (恩斯克)</span><span class="chip f" data-i="15" onclick="openM(15)">★ Schaeffler Humanoids (Taicang)</span><span class="chip f" data-i="15" onclick="openM(15)">★ maxon motor (Suzhou)</span><span class="chip">FAULHABER</span><span class="chip f" data-i="15" onclick="openM(15)">★ Harmonic Drive Systems</span><span class="chip">Henkel</span><span class="chip">MISUMI (China)</span><span class="chip">igus (Shanghai)</span><span class="chip">EMAG (Taicang)</span><span class="chip">Murata (China)</span><span class="chip">MinebeaMitsumi</span><span class="chip">Melexis</span><span class="chip">FRABA</span><span class="chip">NOK-Freudenberg</span><span class="chip">Innodisk (宜鼎)</span><span class="chip">XELA Robotics</span><span class="chip">SMC Automation</span></div></div><div class="cat" data-cat="한국관 &amp; 해외 기업"><div class="catname">한국관 &amp; 해외 기업 <span style="color:var(--mut);font-weight:400">(10)</span></div><div class="chips"><span class="chip f" data-i="10" onclick="openM(10)">★ ROBOTIS (로보티즈)</span><span class="chip f" data-i="11" onclick="openM(11)">★ Neuromeka (뉴로메카)</span><span class="chip">Neubility (뉴빌리티)</span><span class="chip">Dynamic Solution (다이나믹솔루션)</span><span class="chip">SOLID VUE (솔리드뷰)</span><span class="chip">SENES Technology (세네스테크놀로지)</span><span class="chip">AidALL (에이드올)</span><span class="chip">Robotics Society of Singapore</span><span class="chip">Fatfish Technology (싱가포르)</span><span class="chip">Cloud Gold (싱가포르)</span></div></div><div class="cat" data-cat="중국 완제품 &amp; 로봇 제어"><div class="catname">중국 완제품 &amp; 로봇 제어 <span style="color:var(--mut);font-weight:400">(11)</span></div><div class="chips"><span class="chip">EngineAI (众擎)</span><span class="chip">ROBOTERA (星动纪元)</span><span class="chip">Siasun (新松)</span><span class="chip">Leju Robotics (乐聚)</span><span class="chip">Noetix Robotics (松延动力)</span><span class="chip f" data-i="9" onclick="openM(9)">★ Booster Robotics (加速进化)</span><span class="chip">UniX AI (优理奇)</span><span class="chip">PsiBot (灵初智能)</span><span class="chip">Spirit AI (万境千寻)</span><span class="chip">Zhejiang Hechuan (禾川)</span><span class="chip">Yaskawa Shougang (安川首钢)</span></div></div><div class="cat" data-cat="비전 · 센서 · LiDAR"><div class="catname">비전 · 센서 · LiDAR <span style="color:var(--mut);font-weight:400">(11)</span></div><div class="chips"><span class="chip f" data-i="12" onclick="openM(12)">★ Hesai Technology (禾赛)</span><span class="chip f" data-i="13" onclick="openM(13)">★ Orbbec 3D (奥比中光)</span><span class="chip">ZVISION (一径科技)</span><span class="chip">Slamtec (思岚)</span><span class="chip">Ningbo Keli Sensing (柯力)</span><span class="chip">Sunrise Instruments (宇立)</span><span class="chip">XJC Sensor (鑫精诚)</span><span class="chip">Link-touch (蓝点触控)</span><span class="chip">Reagle Sensing (锐鹰)</span><span class="chip">Hanwei Electronics (汉威)</span><span class="chip">Tashan Technology (他山)</span></div></div><div class="cat" data-cat="손(Hand) · 관절 · 구동 부품"><div class="catname">손(Hand) · 관절 · 구동 부품 <span style="color:var(--mut);font-weight:400">(13)</span></div><div class="chips"><span class="chip">Linkerbot (灵心巧手)</span><span class="chip">Inspire Robots (因时)</span><span class="chip">DexRobot (灵巧智能)</span><span class="chip">CasiaHand (中科硅纪)</span><span class="chip">ZWHAND (兆威灵巧手)</span><span class="chip">Qiangnao Technology (强脑)</span><span class="chip">OYMotion (傲意)</span><span class="chip">DH-Robotics (大寰)</span><span class="chip">Xynova (曦诺未来)</span><span class="chip">PaXini Tech (帕西尼)</span><span class="chip">Joy-Motion (卓誉)</span><span class="chip">Jiecang Linear (捷昌)</span><span class="chip">Kunwei (坤维)</span></div></div><div class="cat" data-cat="반도체 · 컴퓨팅 · 배터리"><div class="catname">반도체 · 컴퓨팅 · 배터리 <span style="color:var(--mut);font-weight:400">(9)</span></div><div class="chips"><span class="chip">GigaDevice (兆易创新)</span><span class="chip">Black Sesame Technologies (黑芝麻)</span><span class="chip">Rockchip (瑞芯微)</span><span class="chip">NAURA Micro-electronics (华创七星)</span><span class="chip">JWIPC (智微智能)</span><span class="chip">Huixi Technology (辉羲智能)</span><span class="chip">EVE Energy (亿纬리능)</span><span class="chip">Grepow (格瑞普)</span><span class="chip">Noitom Robotics (诺亦腾)</span></div></div></div></div></div><div class="hallblk" data-hall="A관"><div class="hallhead" style="background:#2563eb"><div><div class="c">A관 · 智造馆 (지자오관)</div><div class="n">Smart Manufacturing Hall</div></div><div class="p">북쪽 3번째</div></div><div class="hallbox"><p class="halldesc">산업 기반을 다지는 관. 상용 서비스·물류·산업용 완제품과 감속기·모터·베어링 등 국산 핵심 부품 공급망이 가장 두텁게 모인 구역.</p><div class="cats"><div class="cat" data-cat="서비스 · 상용 · 물류 로봇"><div class="catname">서비스 · 상용 · 물류 로봇 <span style="color:var(--mut);font-weight:400">(11)</span></div><div class="chips"><span class="chip f" data-i="17" onclick="openM(17)">★ KEENON Robotics (擎朗)</span><span class="chip f" data-i="17" onclick="openM(17)">★ PUDU Technology (普渡)</span><span class="chip">Beijing Yunji Tech (云迹)</span><span class="chip f" data-i="17" onclick="openM(17)">★ Ecovacs Robotics (科沃斯)</span><span class="chip">Haier Home Robot (海尔)</span><span class="chip">RealMan Intelligent (睿尔曼)</span><span class="chip">Nexwise (杰创智能)</span><span class="chip">Amapbot (高德动量)</span><span class="chip">Beautiful Cube Robot (美丽魔方)</span><span class="chip">Toread Holdings (探路者)</span><span class="chip">RoboParty (萝博派对)</span></div></div><div class="cat" data-cat="산업 · 특수 · 중공업"><div class="catname">산업 · 특수 · 중공업 <span style="color:var(--mut);font-weight:400">(13)</span></div><div class="chips"><span class="chip">Flexiv Robotics (非夕)</span><span class="chip">ROKAE (珞石)</span><span class="chip">Fairino Robot (法奥, 苏州)</span><span class="chip f" data-i="7" onclick="openM(7)">★ Kepler Robotics (上海开普勒)</span><span class="chip">Siasun 계열 STEP (新时达)</span><span class="chip">CITIC Heavy Industries (中信重工)</span><span class="chip">Shandong Guoxing (国兴智能)</span><span class="chip">Hangzhou Shenhao (申昊)</span><span class="chip">Wolong Electric (卧龙电驱)</span><span class="chip">Jingcheng Machinery (京城机电)</span><span class="chip">Shiyuan / CVTE (视源)</span><span class="chip">Ti5robot (钛虎)</span><span class="chip">Galileo Tianjin (伽利略)</span></div></div><div class="cat" data-cat="의료 · 재활 로봇"><div class="catname">의료 · 재활 로봇 <span style="color:var(--mut);font-weight:400">(4)</span></div><div class="chips"><span class="chip f" data-i="18" onclick="openM(18)">★ Beijing Longwood Valley (长木谷)</span><span class="chip">UnionStrong (强联智创)</span><span class="chip">Hangzhou RoboCT (程天科技)</span><span class="chip">CETC 21st Research Institute (中电科机器인)</span></div></div><div class="cat" data-cat="감속기 · 모터 · 구동계"><div class="catname">감속기 · 모터 · 구동계 <span style="color:var(--mut);font-weight:400">(20)</span></div><div class="chips"><span class="chip f" data-i="16" onclick="openM(16)">★ Leader Harmonious Drive (绿的谐波)</span><span class="chip">Laifual Drive (来福谐波)</span><span class="chip">Kofon Transmission (科峰)</span><span class="chip">Moons&#x27; Electric (鸣志)</span><span class="chip">Kinco Automation (步科)</span><span class="chip">Leadshine (雷赛)</span><span class="chip">Xinjian Transmission (新剑)</span><span class="chip">Xiangming Intelligent Drive (祥明)</span><span class="chip">Kpower (伟创动力)</span><span class="chip">Robstride Dynamics (灵足시대)</span><span class="chip">3X Motion (三协电机)</span><span class="chip">Tsino-Dynatron (清能德创)</span><span class="chip">Direct Drive Tech (本末动力)</span><span class="chip">CrabNova (巨蟹智能)</span><span class="chip">XCC Group (五洲新春)</span><span class="chip">Nanfang Precision (南方精工)</span><span class="chip">CCTY (희시위)</span><span class="chip">Luoyang Hongyuan Bearing (鸿元)</span><span class="chip">Zhenyu Technology (震裕)</span><span class="chip">Tongchuan (同川)</span></div></div><div class="cat" data-cat="센서 · 비전 · 컴퓨팅 (A관)"><div class="catname">센서 · 비전 · 컴퓨팅 (A관) <span style="color:var(--mut);font-weight:400">(7)</span></div><div class="chips"><span class="chip">Livox (览沃)</span><span class="chip">Chingmu Vision (青瞳视觉)</span><span class="chip">Xense Robotics (千觉)</span><span class="chip">Matrix / Moxian (墨现)</span><span class="chip">Motic (麦克奥迪)</span><span class="chip">Zhongyi Embodied AI (中亿)</span><span class="chip">iSoftStone Tianqing (软通天擎)</span></div></div><div class="cat" data-cat="연구기관 &amp; 지원기관"><div class="catname">연구기관 &amp; 지원기관 <span style="color:var(--mut);font-weight:400">(4)</span></div><div class="chips"><span class="chip">베이징과학기술대학교 지능 바이오닉 무인시스템팀</span><span class="chip">Beijing E-Town International Talent Group</span><span class="chip">Beijing E-Town Robotics Industry Development</span><span class="chip">중관춘 징진지 신에너지차 협동발전촉진회</span></div></div></div></div></div><div class="hallblk" data-hall="D관"><div class="hallhead" style="background:#7c3aed"><div><div class="c">D관 · 智趣馆 (지취관)</div><div class="n">Smart Entertainment Hall</div></div><div class="p">남쪽 끝 · 임시관 2동</div></div><div class="hallbox"><p class="halldesc">임시 전시관 2동으로 구성된 체험·퍼포먼스 중심 구역. 로봇 공연, 소비자용 제품, 교육·엔터테인먼트 로봇이 모여 있어 일반 관람객·가족 단위에 적합.</p><div class="cats"><div class="cat" data-cat="퍼포먼스 &amp; 체험"><div class="catname">퍼포먼스 &amp; 체험 <span style="color:var(--mut);font-weight:400">(6)</span></div><div class="chips"><span class="chip f" data-i="9" onclick="openM(9)">★ Booster Robotics (加速进化) 로봇 퍼포먼스</span><span class="chip">Moke Robotics (莫刻机器人) 퍼포먼스</span><span class="chip">Hongke Zhixing (泓柯智行) 퍼포먼스</span><span class="chip">Anno Robot (安诺, AI 아이스크림 부스)</span><span class="chip">LuWu Intelligent (陆吾智能, 데스크톱 로봇)</span><span class="chip">Xinyan Robot (心言, 가정 동반 로봇)</span></div></div><div class="cat" data-cat="소비자 · 교육 · 이동 로봇"><div class="catname">소비자 · 교육 · 이동 로봇 <span style="color:var(--mut);font-weight:400">(10)</span></div><div class="chips"><span class="chip">Elephant Robotics (大象机器人)</span><span class="chip">AgileX Robotics (松灵)</span><span class="chip">Yuhesen (煜禾森)</span><span class="chip">Pangolin Robot (穿山甲)</span><span class="chip">Ruiwei Information (瑞为科技)</span><span class="chip">Tujian Technology (途见科技)</span><span class="chip">Aitu Embodied AI (艾图科技)</span><span class="chip">Zoomlion (中联重科)</span><span class="chip">CAS Yungu (中科云谷)</span><span class="chip">Lingtian Intelligent (凌天지능)</span></div></div><div class="cat" data-cat="부품 · 소재 (D관)"><div class="catname">부품 · 소재 (D관) <span style="color:var(--mut);font-weight:400">(8)</span></div><div class="chips"><span class="chip">DM Technology (达妙科技)</span><span class="chip">Newgear (纽格尔)</span><span class="chip">Nidec-Shimpo류 纽氏达特 행성감속기</span><span class="chip">Longxi Bearing (龙溪轴承)</span><span class="chip">Liangzhi Joint (良质关节)</span><span class="chip">Fuxing Motor (富兴电机)</span><span class="chip">Ruitai Robot (润泰)</span><span class="chip">Xicimag (希磁科技)</span></div></div></div></div></div><p id="nores" class="ssub hide" style="text-align:center;padding:20px 0">검색 결과가 없습니다.</p></section><section id="featured"><h2>5. 주요 기업 상세 특징</h2><p class="ssub">관 배치 · 핵심 분야 · 검증된 기술 특징 · 참관 포인트</p><div class="cards"><div class="co"><div class="top"><span class="badge" style="background:#e11d48">C관</span>특설 슈퍼 전시구역</div><h4>JD.com (京东集团)</h4><div class="focus"><span class="lbl">핵심 분야</span>물류·리테일·산업·가사 시나리오 통합 구체지능</div><ul><li>주최 측 보도자료 기준 C관(智创馆)에 【未来人机共生新范式】 슈퍼 전시구역 운영</li><li>일체화 공급망을 기반으로 물류·리테일·산업·가사 4개 응용 시나리오를 한 부스에 통합 전시</li></ul><div class="take"><b>참관 포인트</b> · ‘글로벌 독점 전략 파트너’ 표기는 공식 자료에 근거가 없음. 실제 관전 포인트는 응용 시나리오 통합 방식</div></div><div class="co"><div class="top"><span class="badge" style="background:#e11d48">C관</span>혁신센터</div><h4>베이징 인형로봇 혁신센터</h4><div class="focus"><span class="lbl">핵심 분야</span>전동 휴머노이드 Tiangong(天工) 시리즈, 구체지능</div><ul><li>2026 신제품 ‘天工 Omni’ 공개 — 고연산·다자유도, 풀스택 오픈으로 2차 개발 용이</li><li>CE·CR 인증 기준 충족, 멀티모달 감지 기반 전 시나리오 운동, 낙하 등급 내구 설계</li></ul><div class="take"><b>참관 포인트</b> · C관 최대 인기 부스. 오픈 플랫폼 정책과 인증 대응 수준을 함께 확인</div></div><div class="co"><div class="top"><span class="badge" style="background:#e11d48">C관</span>휴머노이드 &amp; 4족</div><h4>Unitree Robotics (宇树科技)</h4><div class="focus"><span class="lbl">핵심 분야</span>4족 보행 로봇, 범용 휴머노이드</div><ul><li>4족 보행 로봇 글로벌 점유율 선두, 자사 개발 모터·동적 밸런싱 기술 보유</li><li>C관 대표 브랜드 축에 배치되어 현장 퍼포먼스 관람 인파가 가장 많은 구역 중 하나</li></ul><div class="take"><b>참관 포인트</b> · 가성비 휴머노이드 라인업의 실제 완성도와 시연 반복 안정성을 직접 비교</div></div><div class="co"><div class="top"><span class="badge" style="background:#e11d48">C관</span>휴머노이드</div><h4>LimX Dynamics (逐际动力)</h4><div class="focus"><span class="lbl">핵심 분야</span>다리-바퀴 복합 이동, 강화학습 모션 제어</div><ul><li>2026 최초 공개 ‘LimX Luna’ — 160cm 소프트 소재 커버 바디, 27자유도, 퀵릴리스 구조</li><li>음성 LLM 연속 대화·제스처 인식·자세 모방, 200대 이상 군집 공연(동작 동기 오차 50ms 미만)</li></ul><div class="take"><b>참관 포인트</b> · 군집 제어·공연 운용은 렌털/이벤트 사업 모델과 직결 — 태블릿 군집 관제 데모 확인</div></div><div class="co"><div class="top"><span class="badge" style="background:#e11d48">C관</span>구체지능</div><h4>Xinghaitu (星海图)</h4><div class="focus"><span class="lbl">핵심 분야</span>이족 휴머노이드 Kengo, VLA 기반 조작</div><ul><li>Kengo: 1.4m 이족, 헤드부 곡면 스크린, 단일 관절 토크 130N·m 이상</li><li>낙하 10회 후에도 손상 없는 내구 설계, 전(全)중공 모듈 구조로 배선 굴곡 수명 20만 회 이상</li></ul><div class="take"><b>참관 포인트</b> · 상용 운용 시 유지보수 비용을 좌우하는 내구·배선 설계가 핵심 차별점</div></div><div class="co"><div class="top"><span class="badge" style="background:#e11d48">C관</span>휴머노이드</div><h4>UBTECH Robotics (优必选)</h4><div class="focus"><span class="lbl">핵심 분야</span>산업용 Walker 시리즈, 교육·서비스 로봇</div><ul><li>홍콩 증시 상장 휴머노이드 선도 기업, C관 대표 브랜드 축에 배치</li><li>2026 출품작에 학교용 조교 로봇 ‘TutorC’ 포함 — 수업 진행·시연·상호작용 보조</li></ul><div class="take"><b>참관 포인트</b> · 산업 실증과 교육 시장 확장 전략을 한 부스에서 비교 가능</div></div><div class="co"><div class="top"><span class="badge" style="background:#e11d48">C관</span>휴머노이드 &amp; 4족</div><h4>Magiclab (魔法原子)</h4><div class="focus"><span class="lbl">핵심 분야</span>MagicBot / MagicDog 시리즈</div><ul><li>MagicBot X1: 31자유도, 피크 관절 토크 최대 400N·m, 항공급 경량 소재</li><li>듀얼 배터리 핫스왑으로 7×24시간 연속 작업, 소프트·하드웨어 개발 인터페이스 개방</li></ul><div class="take"><b>참관 포인트</b> · 고토크·연속가동 스펙 — 순찰/제조/물류 도입 검토 시 1순위 비교 대상</div></div><div class="co"><div class="top"><span class="badge" style="background:#2563eb">A관</span>산업용 로봇</div><h4>Kepler Robotics (上海开普勒)</h4><div class="focus"><span class="lbl">핵심 분야</span>중하중 4족 로봇 麒麟(Kirin) 시리즈</div><ul><li>Kirin 시리즈는 휴머노이드가 아닌 대형 4족 로봇 — 자체 개발 유성 롤러 스크류 적용</li><li>만재 시 근 1톤급, 1회 충전 8시간 연속 보행, 전신 IPX5·핵심부품 IP67, 최대 등판 45°</li></ul><div class="take"><b>참관 포인트</b> · 산업 운반·산악 군수·재난 대응 등 중하중 옥외 임무 적합성 확인</div></div><div class="co"><div class="top"><span class="badge" style="background:#e11d48">C관</span>특수환경 로봇</div><h4>Zhishen Innovation (智身新创)</h4><div class="focus"><span class="lbl">핵심 분야</span>방폭 로봇 ‘铅球 SP1’</div><ul><li>Ex IIC T6 Gb 방폭 설계로 폭발 위험 구역 진입 가능</li><li>전지형 주행 및 장시간 연속 안정 작업 지향</li></ul><div class="take"><b>참관 포인트</b> · 석유화학·가스·화약 등 위험구역 무인 순찰 수요가 있다면 필수 방문</div></div><div class="co"><div class="top"><span class="badge" style="background:#059669">B관</span>구체지능 플랫폼</div><h4>Booster Robotics (加速进化)</h4><div class="focus"><span class="lbl">핵심 분야</span>개발자용 휴머노이드 플랫폼 T2</div><ul><li>Booster T2는 구체지능 개발용 플래그십 플랫폼으로 업계 최상위 수준 연산 성능 강조</li><li>감지→이해→응답의 완결형 폐루프 구조. D관(智趣馆)에서 퍼포먼스도 별도 진행</li></ul><div class="take"><b>참관 포인트</b> · 연구·교육용 플랫폼 도입 시 SDK 개방 범위와 실기 훈련 지원을 확인</div></div><div class="co"><div class="top"><span class="badge" style="background:#059669">B관</span>한국관</div><h4>ROBOTIS (로보티즈)</h4><div class="focus"><span class="lbl">핵심 분야</span>스마트 액추에이터, 오픈소스 휴머노이드</div><ul><li>2026 출품작 ‘AI Sapiens’ — 기구·전장·소프트웨어·시뮬레이션 전 계층 오픈소스 공개</li><li>실기(實機) 중심 개발 체계로 시뮬레이션-실기 간 격차를 줄이는 워크플로 제시</li></ul><div class="take"><b>참관 포인트</b> · 국내 기업 중 오픈소스 전략이 가장 선명한 부스. 2차 개발 라이선스 조건 확인</div></div><div class="co"><div class="top"><span class="badge" style="background:#059669">B관</span>한국관</div><h4>Neuromeka (뉴로메카)</h4><div class="focus"><span class="lbl">핵심 분야</span>협동로봇 Indy, 자율이동로봇 Moby</div><ul><li>충돌 감지 안전 알고리즘 기반 협동로봇 라인업</li><li>중소 제조현장 대상 스마트 팩토리 셀 구축 경험 보유</li></ul><div class="take"><b>참관 포인트</b> · 중국산 협동로봇과의 가격·제어 소프트웨어 경쟁력 직접 비교</div></div><div class="co"><div class="top"><span class="badge" style="background:#059669">B관</span>센서/LiDAR</div><h4>Hesai Technology (禾赛)</h4><div class="focus"><span class="lbl">핵심 분야</span>고성능 3D LiDAR</div><ul><li>자율주행·로봇용 LiDAR 시장 선도 업체, B관 센서 축에 위치</li><li>로봇용 소형 라인업과 고해상도 라인업을 함께 전시</li></ul><div class="take"><b>참관 포인트</b> · ZVISION·Slamtec·Livox(A관)와 묶어 비교 견적 동선을 짜면 효율적</div></div><div class="co"><div class="top"><span class="badge" style="background:#059669">B관</span>센서/비전</div><h4>Orbbec 3D (奥比中光)</h4><div class="focus"><span class="lbl">핵심 분야</span>3D 비전, Depth 카메라</div><ul><li>구체지능용 비전 센서 조합 출품 — AI-native 뎁스 엔진과 전용 광학계</li><li>GMSL2 고대역 전송, 광온도 동작·고방진 설계의 산업용 규격</li></ul><div class="take"><b>참관 포인트</b> · 휴머노이드 헤드부 센서 패키지 통합을 검토한다면 필수 확인</div></div><div class="co"><div class="top"><span class="badge" style="background:#059669">B관</span>글로벌 반도체</div><h4>AMD</h4><div class="focus"><span class="lbl">핵심 분야</span>임베디드 AI, 엣지 컴퓨팅</div><ul><li>로봇 실시간 제어 및 엣지 AI 처리용 솔루션 전시</li><li>Infineon·Realtek·Rockchip·Black Sesame 등과 함께 B관 글로벌 축 형성</li></ul><div class="take"><b>참관 포인트</b> · 메인 제어보드 프로세서 선정을 위한 벤치마킹 동선의 출발점</div></div><div class="co"><div class="top"><span class="badge" style="background:#059669">B관</span>글로벌 구동 부품</div><h4>maxon motor / Harmonic Drive / Schaeffler</h4><div class="focus"><span class="lbl">핵심 분야</span>정밀 모터, 감속기, 휴머노이드 관절</div><ul><li>maxon(스위스 정밀 모터), Harmonic Drive(정밀 감속기 원조), Schaeffler(휴머노이드 전용 법인 太仓) 인접 배치</li><li>NSK·FAULHABER·igus·MISUMI·Henkel·3M도 같은 축에 위치</li></ul><div class="take"><b>참관 포인트</b> · 글로벌 구동 부품 3사를 한 축에서 비교 후 A관 국산 대체품과 교차 검증</div></div><div class="co"><div class="top"><span class="badge" style="background:#2563eb">A관</span>핵심 부품</div><h4>Leader Harmonious Drive (绿的谐波)</h4><div class="focus"><span class="lbl">핵심 분야</span>정밀 하모닉 감속기</div><ul><li>중국 최대 하모닉 감속기 업체, A관 부품 축의 중심</li><li>来福·科峰·新剑·清能德创 등 감속기·구동 업체가 인접 배치</li></ul><div class="take"><b>참관 포인트</b> · B관 글로벌 3사 대비 원가 절감형 대체 공급망을 검증하기 좋은 위치</div></div><div class="co"><div class="top"><span class="badge" style="background:#2563eb">A관</span>상용 서비스 로봇</div><h4>KEENON / PUDU / Ecovacs</h4><div class="focus"><span class="lbl">핵심 분야</span>서빙·배달·청소 자율주행 로봇</div><ul><li>擎朗(KEENON)·普渡(PUDU)·科沃斯(Ecovacs)가 A관 서비스 축에 함께 배치</li><li>云迹(Yunji)·海尔(Haier)·美丽魔方 등 상용 완제품 기업도 인접</li></ul><div class="take"><b>참관 포인트</b> · 중국 서비스 로봇 상위 업체를 한 동선에서 스펙·가격 비교 가능</div></div><div class="co"><div class="top"><span class="badge" style="background:#2563eb">A관</span>의료 로봇</div><h4>Beijing Longwood Valley (长木谷)</h4><div class="focus"><span class="lbl">핵심 분야</span>AI 정형외과 수술 로봇</div><ul><li>ROPA6 — 고관절·슬관절·단과·척추·외상·스포츠의학 6개 술식을 통합한 플랫폼</li><li>단일 제품 체계로 인허가 및 임상 도입을 완료했다고 발표</li></ul><div class="take"><b>참관 포인트</b> · 중국 의료로봇 인허가·상용화 속도를 가늠할 수 있는 대표 사례</div></div></div></section><section id="new"><h2>6. 2026 하이라이트 신제품 (공식 亮点展品)</h2><p class="ssub">주최 측이 공개한 하이라이트 전시품 중 주요 9종. 사양은 공식 게시 내용을 따랐습니다.</p><div class="cards"><div class="co"><div><span class="badge" style="background:#e11d48">휴머노이드</span><span class="rwhere">C관 · LimX Dynamics</span></div><div class="rname">LimX Luna (全尺寸交互人形)</div><div class="rdesc">160cm 소프트 소재 커버 바디 · 27자유도 · 퀵릴리스 구조 · 달리기/점프/공중제비. 음성 LLM 연속 대화, 제스처 인식, 자세 모방. 200대 이상 군집 공연 지원(동작 동기 오차 50ms 미만).</div></div><div class="co"><div><span class="badge" style="background:#e11d48">휴머노이드</span><span class="rwhere">C관 · 베이징 인형로봇 혁신센터</span></div><div class="rname">天工 Omni (Tiangong Omni)</div><div class="rdesc">고연산·다자유도 하드웨어에 풀스택 오픈 구조. CE·CR 인증 기준 충족, 멀티모달 감지 기반 전 시나리오 운동, 낙하 등급 내구성으로 장기 운용 대응.</div></div><div class="co"><div><span class="badge" style="background:#e11d48">휴머노이드</span><span class="rwhere">C관 · Xinghaitu (星海图)</span></div><div class="rname">Kengo</div><div class="rdesc">1.4m 이족 · 헤드부 곡면 스크린 · 단일 관절 토크 130N·m 이상으로 고난도 동작 재현. 낙하 10회 무손상, 전중공 모듈 구조로 배선 굴곡 수명 20만 회 이상.</div></div><div class="co"><div><span class="badge" style="background:#e11d48">휴머노이드</span><span class="rwhere">C관 · Magiclab (魔法原子)</span></div><div class="rname">MagicBot X1</div><div class="rdesc">31자유도, 피크 관절 토크 최대 400N·m. 항공급 경량 소재와 듀얼 배터리 핫스왑으로 7×24시간 연속 작업. 순찰·제조·물류·안내·공공서비스 대응.</div></div><div class="co"><div><span class="badge" style="background:#d97706">4족 · 중하중</span><span class="rwhere">A관 · Shanghai Kepler</span></div><div class="rname">开普勒麒麟 (Kirin) 시리즈</div><div class="rdesc">휴머노이드가 아닌 대형 4족 로봇. 자체 유성 롤러 스크류 기반으로 만재 근 1톤급, 1회 충전 8시간 연속 보행. 전신 IPX5·핵심부 IP67, 최대 등판 45°.</div></div><div class="co"><div><span class="badge" style="background:#475569">특수환경</span><span class="rwhere">C관 · Zhishen Innovation</span></div><div class="rname">铅球 SP1 (Shot Put SP1)</div><div class="rdesc">Ex IIC T6 Gb 방폭 설계로 폭발 위험 구역 진입 가능. 전지형 주행과 장시간 연속 안정 작업에 초점을 맞춘 특수환경 로봇.</div></div><div class="co"><div><span class="badge" style="background:#059669">개발 플랫폼</span><span class="rwhere">B관 · Booster Robotics</span></div><div class="rname">Booster T2</div><div class="rdesc">구체지능 개발용 플래그십 플랫폼. 업계 최상위 수준 연산 성능을 내세워 감지→이해→응답의 완결형 폐루프를 구현. D관에서 퍼포먼스도 진행.</div></div><div class="co"><div><span class="badge" style="background:#4f46e5">가정용 서비스</span><span class="rwhere">C관 · Vita Dynamics (维他动力)</span></div><div class="rname">Vbot 人形机器人</div><div class="rdesc">멀티모달 상호작용·자율 이동·조작 능력 결합. 신축형 몸체와 유연 로봇팔로 바닥·테이블·수납장 높이를 모두 커버, 물건 집기/전달/정리/가전 조작 수행.</div></div><div class="co"><div><span class="badge" style="background:#0284c7">오픈소스</span><span class="rwhere">B관 한국관 · ROBOTIS</span></div><div class="rname">AI Sapiens</div><div class="rdesc">기구·전장·소프트웨어·시뮬레이션 전 계층을 개방한 풀스택 오픈소스 휴머노이드. 실기 중심 개발 체계로 시뮬레이션-실기 간 이행을 단축.</div></div></div><div class="tip" style="margin-top:12px">이 밖에 小朴Simbot(23DOF 휠-암), Linker Hand O30(20자유도 직구동 핸드), RealBOT S2(웅크림 가능 모바일 매니퓰레이터), Astribot T1(말단속도 10m/s 이상), ROPA6(AI 정형외과 수술 로봇), MagicDog T1(최고 5m/s 4족) 등 신제품 150여 종이 최초 공개됩니다.</div></section></div><div class="modal" id="modal" onclick="if(event.target.id=='modal')closeM()"><div class="mbox"><button class="mclose" onclick="closeM()">✕</button><div id="mbody"></div></div></div><footer>2026 World Robot Expo 가이드 (검증판) · 출처: worldrobotconference.com/expo, wrc.cie.org.cn, english.beijing.gov.cn<br>전시 구성과 부스 배치는 변경될 수 있으므로 방문 전 공식 사이트를 재확인하세요.</footer><script>
+const FEAT = [{"name": "JD.com (京东集团)", "hall": "C관", "cat": "특설 슈퍼 전시구역", "focus": "물류·리테일·산업·가사 시나리오 통합 구체지능", "feats": ["주최 측 보도자료 기준 C관(智创馆)에 【未来人机共生新范式】 슈퍼 전시구역 운영", "일체화 공급망을 기반으로 물류·리테일·산업·가사 4개 응용 시나리오를 한 부스에 통합 전시"], "take": "‘글로벌 독점 전략 파트너’ 표기는 공식 자료에 근거가 없음. 실제 관전 포인트는 응용 시나리오 통합 방식"}, {"name": "베이징 인형로봇 혁신센터", "hall": "C관", "cat": "혁신센터", "focus": "전동 휴머노이드 Tiangong(天工) 시리즈, 구체지능", "feats": ["2026 신제품 ‘天工 Omni’ 공개 — 고연산·다자유도, 풀스택 오픈으로 2차 개발 용이", "CE·CR 인증 기준 충족, 멀티모달 감지 기반 전 시나리오 운동, 낙하 등급 내구 설계"], "take": "C관 최대 인기 부스. 오픈 플랫폼 정책과 인증 대응 수준을 함께 확인"}, {"name": "Unitree Robotics (宇树科技)", "hall": "C관", "cat": "휴머노이드 & 4족", "focus": "4족 보행 로봇, 범용 휴머노이드", "feats": ["4족 보행 로봇 글로벌 점유율 선두, 자사 개발 모터·동적 밸런싱 기술 보유", "C관 대표 브랜드 축에 배치되어 현장 퍼포먼스 관람 인파가 가장 많은 구역 중 하나"], "take": "가성비 휴머노이드 라인업의 실제 완성도와 시연 반복 안정성을 직접 비교"}, {"name": "LimX Dynamics (逐际动力)", "hall": "C관", "cat": "휴머노이드", "focus": "다리-바퀴 복합 이동, 강화학습 모션 제어", "feats": ["2026 최초 공개 ‘LimX Luna’ — 160cm 소프트 소재 커버 바디, 27자유도, 퀵릴리스 구조", "음성 LLM 연속 대화·제스처 인식·자세 모방, 200대 이상 군집 공연(동작 동기 오차 50ms 미만)"], "take": "군집 제어·공연 운용은 렌털/이벤트 사업 모델과 직결 — 태블릿 군집 관제 데모 확인"}, {"name": "Xinghaitu (星海图)", "hall": "C관", "cat": "구체지능", "focus": "이족 휴머노이드 Kengo, VLA 기반 조작", "feats": ["Kengo: 1.4m 이족, 헤드부 곡면 스크린, 단일 관절 토크 130N·m 이상", "낙하 10회 후에도 손상 없는 내구 설계, 전(全)중공 모듈 구조로 배선 굴곡 수명 20만 회 이상"], "take": "상용 운용 시 유지보수 비용을 좌우하는 내구·배선 설계가 핵심 차별점"}, {"name": "UBTECH Robotics (优必选)", "hall": "C관", "cat": "휴머노이드", "focus": "산업용 Walker 시리즈, 교육·서비스 로봇", "feats": ["홍콩 증시 상장 휴머노이드 선도 기업, C관 대표 브랜드 축에 배치", "2026 출품작에 학교용 조교 로봇 ‘TutorC’ 포함 — 수업 진행·시연·상호작용 보조"], "take": "산업 실증과 교육 시장 확장 전략을 한 부스에서 비교 가능"}, {"name": "Magiclab (魔法原子)", "hall": "C관", "cat": "휴머노이드 & 4족", "focus": "MagicBot / MagicDog 시리즈", "feats": ["MagicBot X1: 31자유도, 피크 관절 토크 최대 400N·m, 항공급 경량 소재", "듀얼 배터리 핫스왑으로 7×24시간 연속 작업, 소프트·하드웨어 개발 인터페이스 개방"], "take": "고토크·연속가동 스펙 — 순찰/제조/물류 도입 검토 시 1순위 비교 대상"}, {"name": "Kepler Robotics (上海开普勒)", "hall": "A관", "cat": "산업용 로봇", "focus": "중하중 4족 로봇 麒麟(Kirin) 시리즈", "feats": ["Kirin 시리즈는 휴머노이드가 아닌 대형 4족 로봇 — 자체 개발 유성 롤러 스크류 적용", "만재 시 근 1톤급, 1회 충전 8시간 연속 보행, 전신 IPX5·핵심부품 IP67, 최대 등판 45°"], "take": "산업 운반·산악 군수·재난 대응 등 중하중 옥외 임무 적합성 확인"}, {"name": "Zhishen Innovation (智身新创)", "hall": "C관", "cat": "특수환경 로봇", "focus": "방폭 로봇 ‘铅球 SP1’", "feats": ["Ex IIC T6 Gb 방폭 설계로 폭발 위험 구역 진입 가능", "전지형 주행 및 장시간 연속 안정 작업 지향"], "take": "석유화학·가스·화약 등 위험구역 무인 순찰 수요가 있다면 필수 방문"}, {"name": "Booster Robotics (加速进化)", "hall": "B관", "cat": "구체지능 플랫폼", "focus": "개발자용 휴머노이드 플랫폼 T2", "feats": ["Booster T2는 구체지능 개발용 플래그십 플랫폼으로 업계 최상위 수준 연산 성능 강조", "감지→이해→응답의 완결형 폐루프 구조. D관(智趣馆)에서 퍼포먼스도 별도 진행"], "take": "연구·교육용 플랫폼 도입 시 SDK 개방 범위와 실기 훈련 지원을 확인"}, {"name": "ROBOTIS (로보티즈)", "hall": "B관", "cat": "한국관", "focus": "스마트 액추에이터, 오픈소스 휴머노이드", "feats": ["2026 출품작 ‘AI Sapiens’ — 기구·전장·소프트웨어·시뮬레이션 전 계층 오픈소스 공개", "실기(實機) 중심 개발 체계로 시뮬레이션-실기 간 격차를 줄이는 워크플로 제시"], "take": "국내 기업 중 오픈소스 전략이 가장 선명한 부스. 2차 개발 라이선스 조건 확인"}, {"name": "Neuromeka (뉴로메카)", "hall": "B관", "cat": "한국관", "focus": "협동로봇 Indy, 자율이동로봇 Moby", "feats": ["충돌 감지 안전 알고리즘 기반 협동로봇 라인업", "중소 제조현장 대상 스마트 팩토리 셀 구축 경험 보유"], "take": "중국산 협동로봇과의 가격·제어 소프트웨어 경쟁력 직접 비교"}, {"name": "Hesai Technology (禾赛)", "hall": "B관", "cat": "센서/LiDAR", "focus": "고성능 3D LiDAR", "feats": ["자율주행·로봇용 LiDAR 시장 선도 업체, B관 센서 축에 위치", "로봇용 소형 라인업과 고해상도 라인업을 함께 전시"], "take": "ZVISION·Slamtec·Livox(A관)와 묶어 비교 견적 동선을 짜면 효율적"}, {"name": "Orbbec 3D (奥比中光)", "hall": "B관", "cat": "센서/비전", "focus": "3D 비전, Depth 카메라", "feats": ["구체지능용 비전 센서 조합 출품 — AI-native 뎁스 엔진과 전용 광학계", "GMSL2 고대역 전송, 광온도 동작·고방진 설계의 산업용 규격"], "take": "휴머노이드 헤드부 센서 패키지 통합을 검토한다면 필수 확인"}, {"name": "AMD", "hall": "B관", "cat": "글로벌 반도체", "focus": "임베디드 AI, 엣지 컴퓨팅", "feats": ["로봇 실시간 제어 및 엣지 AI 처리용 솔루션 전시", "Infineon·Realtek·Rockchip·Black Sesame 등과 함께 B관 글로벌 축 형성"], "take": "메인 제어보드 프로세서 선정을 위한 벤치마킹 동선의 출발점"}, {"name": "maxon motor / Harmonic Drive / Schaeffler", "hall": "B관", "cat": "글로벌 구동 부품", "focus": "정밀 모터, 감속기, 휴머노이드 관절", "feats": ["maxon(스위스 정밀 모터), Harmonic Drive(정밀 감속기 원조), Schaeffler(휴머노이드 전용 법인 太仓) 인접 배치", "NSK·FAULHABER·igus·MISUMI·Henkel·3M도 같은 축에 위치"], "take": "글로벌 구동 부품 3사를 한 축에서 비교 후 A관 국산 대체품과 교차 검증"}, {"name": "Leader Harmonious Drive (绿的谐波)", "hall": "A관", "cat": "핵심 부품", "focus": "정밀 하모닉 감속기", "feats": ["중국 최대 하모닉 감속기 업체, A관 부품 축의 중심", "来福·科峰·新剑·清能德创 등 감속기·구동 업체가 인접 배치"], "take": "B관 글로벌 3사 대비 원가 절감형 대체 공급망을 검증하기 좋은 위치"}, {"name": "KEENON / PUDU / Ecovacs", "hall": "A관", "cat": "상용 서비스 로봇", "focus": "서빙·배달·청소 자율주행 로봇", "feats": ["擎朗(KEENON)·普渡(PUDU)·科沃斯(Ecovacs)가 A관 서비스 축에 함께 배치", "云迹(Yunji)·海尔(Haier)·美丽魔方 등 상용 완제품 기업도 인접"], "take": "중국 서비스 로봇 상위 업체를 한 동선에서 스펙·가격 비교 가능"}, {"name": "Beijing Longwood Valley (长木谷)", "hall": "A관", "cat": "의료 로봇", "focus": "AI 정형외과 수술 로봇", "feats": ["ROPA6 — 고관절·슬관절·단과·척추·외상·스포츠의학 6개 술식을 통합한 플랫폼", "단일 제품 체계로 인허가 및 임상 도입을 완료했다고 발표"], "take": "중국 의료로봇 인허가·상용화 속도를 가늠할 수 있는 대표 사례"}];
+function toggleTheme(){const r=document.documentElement;r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';}
+function showRoute(n,btn){
+  document.querySelectorAll('.rlayer').forEach(g=>g.style.display='none');
+  if(n!==0){const g=document.getElementById('rlayer-'+n); if(g)g.style.display='';}
+  btn.parentNode.querySelectorAll('.btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');
+}
+let hallF='all';
+function filterHall(h,btn){hallF=h;btn.parentNode.querySelectorAll('.btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');apply();}
+function filterChips(){apply();}
+function apply(){
+  const q=(document.getElementById('q').value||'').trim().toLowerCase();
+  let total=0;
+  document.querySelectorAll('.hallblk').forEach(blk=>{
+    const hOk = hallF==='all'||blk.dataset.hall===hallF;
+    let hallHits=0;
+    blk.querySelectorAll('.cat').forEach(cat=>{
+      const catName=(cat.dataset.cat||'').toLowerCase();
+      let hits=0;
+      cat.querySelectorAll('.chip').forEach(ch=>{
+        const t=ch.textContent.toLowerCase();
+        const ok=!q||t.includes(q)||catName.includes(q);
+        ch.classList.toggle('hide',!ok); if(ok)hits++;
+      });
+      cat.classList.toggle('hide',hits===0); hallHits+=hits;
+    });
+    blk.classList.toggle('hide',!hOk||hallHits===0);
+    if(hOk)total+=hallHits;
+  });
+  document.getElementById('nores').classList.toggle('hide',total>0);
+}
+function openM(i){
+  const d=FEAT[i]; if(!d)return;
+  const col={'A관':'#2563eb','B관':'#059669','C관':'#e11d48','D관':'#7c3aed'}[d.hall];
+  document.getElementById('mbody').innerHTML=
+    '<div class="top"><span class="badge" style="background:'+col+'">'+d.hall+'</span>'+d.cat+'</div>'+
+    '<h4 style="font-size:19px;margin:6px 0 12px">'+d.name+'</h4>'+
+    '<div class="focus"><span class="lbl">핵심 분야</span>'+d.focus+'</div>'+
+    '<ul>'+d.feats.map(f=>'<li>'+f+'</li>').join('')+'</ul>'+
+    '<div class="take"><b>참관 포인트</b> · '+d.take+'</div>';
+  document.getElementById('modal').classList.add('open');
+}
+function closeM(){document.getElementById('modal').classList.remove('open');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeM();});
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.dataset.theme='dark';
+</script></body></html>
