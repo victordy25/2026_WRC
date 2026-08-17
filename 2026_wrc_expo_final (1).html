@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 세계 로봇 컨퍼런스 엑스포 (WRC Expo) 가이드</title>
+    <!-- Google Fonts & Tailwind CSS CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .custom-scrollbar::-webkit-scrollbar { height: 6px; width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-sans transition-colors duration-200">
+
+    <!-- Hero Header -->
+    <header class="bg-slate-900 text-white relative overflow-hidden border-b border-slate-800">
+        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:20px_20px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 py-12 sm:py-16 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs px-3 py-1.5 rounded-full font-semibold mb-4">
+                        <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                        2026 World Robot Conference Expo Guide
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-white mb-3">
+                        2026 세계 로봇 컨퍼런스 엑스포
+                    </h1>
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl font-normal leading-relaxed">
+                        글로벌 로봇 생태계 출품 기업 및 주요 핵심 기업 기술 특징 분석 종합 가이드
+                    </p>
+                </div>
+
+                <!-- Strategic Partner Badge -->
+                <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-5 backdrop-blur-md self-start md:self-auto min-w-[260px] shadow-xl">
+                    <div class="text-xs text-slate-400 font-medium mb-1">글로벌 독점 전략 파트너</div>
+                    <div class="text-xl font-bold text-red-500 flex items-center gap-2">
+                        <span>JD.com</span>
+                        <span class="text-xs text-slate-300 font-normal">(징동그룹)</span>
+                    </div>
+                    <div class="mt-3 text-xs text-slate-400 border-t border-slate-700/60 pt-2 flex items-center justify-between">
+                        <span>전시 규모</span>
+                        <span class="text-white font-semibold">약 50,000㎡ / 1,200+ 기업</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header Quick Stats -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-10 no-print">
+                <div class="bg-slate-800/50 border border-slate-700/80 rounded-xl p-3.5 text-center">
+                    <div class="text-xs text-slate-400">참가 기업 및 기관</div>
+                    <div class="text-lg sm:text-xl font-bold text-sky-400 mt-0.5">1,200+</div>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-700/80 rounded-xl p-3.5 text-center">
+                    <div class="text-xs text-slate-400">핵심 관람 구역</div>
+                    <div class="text-lg sm:text-xl font-bold text-sky-400 mt-0.5">Area A / B / C</div>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-700/80 rounded-xl p-3.5 text-center">
+                    <div class="text-xs text-slate-400">기업 특징 카드 DB</div>
+                    <div class="text-lg sm:text-xl font-bold text-amber-400 mt-0.5">주요 기업 상세정보</div>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-700/80 rounded-xl p-3.5 text-center">
+                    <div class="text-xs text-slate-400">최초 공개 로봇</div>
+                    <div class="text-lg sm:text-xl font-bold text-sky-400 mt-0.5">6대 신제품</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation & Search Bar -->
+    <nav class="sticky top-0 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur border-b border-slate-200 dark:border-slate-800 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col sm:flex-row items-center justify-between h-auto sm:h-16 py-3 sm:py-0 gap-3">
+                <div class="flex items-center gap-1 sm:gap-2 overflow-x-auto w-full sm:w-auto custom-scrollbar no-print text-xs sm:text-sm font-semibold">
+                    <a href="#overview" class="py-2 px-3 rounded-lg text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all whitespace-nowrap">엑스포 개요</a>
+                    <a href="#areas" class="py-2 px-3 rounded-lg text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all whitespace-nowrap">구역별 기업 & 특징</a>
+                    <a href="#highlights" class="py-2 px-3 rounded-lg text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all whitespace-nowrap">2026 하이라이트 로봇</a>
+                    <a href="#tips" class="py-2 px-3 rounded-lg text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all whitespace-nowrap">관람 팁</a>
+                </div>
+
+                <div class="flex items-center gap-2 w-full sm:w-auto justify-end no-print">
+                    <button id="toggle-featured-only" onclick="toggleFeaturedFilter()" class="text-xs px-2.5 py-1.5 rounded-lg border border-amber-300 bg-amber-50 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300 dark:border-amber-700 font-semibold hover:bg-amber-100 transition-all whitespace-nowrap">
+                        ⭐ 주요 기업만
+                    </button>
+                    <div class="relative flex-1 sm:w-64">
+                        <input type="text" id="company-search" oninput="filterCompanies()" placeholder="기업명, 기술(휴머노이드, LiDAR...)" class="w-full pl-9 pr-3 py-1.5 text-xs sm:text-sm bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 text-slate-800 dark:text-slate-100">
+                        <svg class="w-4 h-4 absolute left-3 top-2.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </div>
+                    <button onclick="toggleDarkMode()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" title="다크/라이트 모드">
+                        <svg id="theme-toggle-dark-icon" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <svg id="theme-toggle-light-icon" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- 1. 엑스포 개요 Section -->
+        <section id="overview" class="scroll-mt-20 bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-700">
+            <div class="flex items-center gap-3 pb-4 mb-6 border-b border-slate-200 dark:border-slate-700">
+                <span class="p-2.5 rounded-xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                </span>
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">1. 엑스포(WRC Expo) 개요</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">세계 최대 규모의 로봇 통합 생태계 및 최첨단 기술 전시</p>
+                </div>
+            </div>
+
+            <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+                2026 세계 로봇 컨퍼런스 엑스포는 로봇 산업 생태계 전반을 아우르는 대표적인 글로벌 전시회입니다. 핵심 부품 공급업체부터 최종 사용자 솔루션 제공업체까지 <strong>전 세계 1,200여 개 이상의 주요 기업 및 연구기관</strong>이 참가하여 최첨단 기술과 상용화 로봇을 선보입니다.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700/80 hover:border-sky-500/50 transition-all">
+                    <div class="w-9 h-9 rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold mb-3 text-lg">01</div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">차세대 응용 기술</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Next-Gen Applications</p>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2">제조·의료·서비스 등 다양한 현장에 바로 적용 가능한 고도화된 상용 솔루션</p>
+                </div>
+
+                <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700/80 hover:border-sky-500/50 transition-all">
+                    <div class="w-9 h-9 rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold mb-3 text-lg">02</div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">첨단 기술 프론티어</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Tech Frontiers</p>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2">구체 지능(Embodied AI), 휴머노이드, 초정밀 모션 제어 등 한계를 넓히는 기술</p>
+                </div>
+
+                <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700/80 hover:border-sky-500/50 transition-all">
+                    <div class="w-9 h-9 rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold mb-3 text-lg">03</div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">글로벌 R&D 시너지</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Global R&D Synergy</p>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2">국가 및 지방 로봇 혁신센터, 글로벌 반도체/센서 기업과의 다각도 글로벌 협력</p>
+                </div>
+
+                <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700/80 hover:border-sky-500/50 transition-all">
+                    <div class="w-9 h-9 rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold mb-3 text-lg">04</div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">신제품 최초 공개</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Product Premieres</p>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2">차세대 휴머노이드 및 차세대 로봇 메커니즘의 세계 최초 및 실물 시연</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 구역별 출품 기업 & 주요 기업 특징 Section -->
+        <section id="areas" class="scroll-mt-20 bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-700">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-6 border-b border-slate-200 dark:border-slate-700 gap-4">
+                <div class="flex items-center gap-3">
+                    <span class="p-2.5 rounded-xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </span>
+                    <div>
+                        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">2. 구역(Area)별 출품 기업 & 주요 기업 특징</h2>
+                        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400"><span class="text-amber-600 dark:text-amber-400 font-semibold">⭐ 표시 기업</span>을 클릭하시면 주요 기술 및 관람 포인트를 보실 수 있습니다.</p>
+                    </div>
+                </div>
+
+                <!-- Area Filter Buttons (Fixed `this` parameter passing) -->
+                <div class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-900 p-1 rounded-xl text-xs font-semibold no-print self-start sm:self-auto">
+                    <button onclick="filterArea(this, 'all')" class="area-filter-btn active px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800 text-slate-800 dark:text-white shadow-sm transition-all">전체보기</button>
+                    <button onclick="filterArea(this, 'Area A')" class="area-filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-all">Area A</button>
+                    <button onclick="filterArea(this, 'Area B')" class="area-filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-green-600 transition-all">Area B</button>
+                    <button onclick="filterArea(this, 'Area C')" class="area-filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-red-600 transition-all">Area C (핵심관)</button>
+                </div>
+            </div>
+
+            <!-- Area Summary Banner Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <div class="p-4 rounded-xl bg-blue-50/70 dark:bg-slate-900/80 border border-blue-200 dark:border-blue-900/50">
+                    <span class="inline-block px-2.5 py-1 rounded bg-blue-600 text-white font-bold text-xs mb-2">Area A</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-sm">로봇 응용, 전문 서비스 & 정밀 부품관</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">서비스용 로봇, 특수·산업 자동화, 대기업 생태계 및 감속기·구동계 집중 구역</p>
+                </div>
+                <div class="p-4 rounded-xl bg-emerald-50/70 dark:bg-slate-900/80 border border-emerald-200 dark:border-emerald-900/50">
+                    <span class="inline-block px-2.5 py-1 rounded bg-emerald-600 text-white font-bold text-xs mb-2">Area B</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-sm">핵심 부품, 반도체/센서 & 해외 대표 기업관</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">관절 모터, 비전/LiDAR, 글로벌 IT/반도체 플랫폼 및 한국관 포함 해외 기업 구역</p>
+                </div>
+                <div class="p-4 rounded-xl bg-rose-50/70 dark:bg-slate-900/80 border border-rose-200 dark:border-rose-900/50">
+                    <span class="inline-block px-2.5 py-1 rounded bg-rose-600 text-white font-bold text-xs mb-2">Area C (★핵심관)</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-sm">휴머노이드, 구체 지능(Embodied AI) & 클러스터관</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">휴머노이드 대표 브랜드, 국가/지방 혁신센터 및 지역 산업 클러스터 집결 구역</p>
+                </div>
+            </div>
+
+            <!-- Interactive Area Companies Grid Container -->
+            <div id="company-cards-container" class="space-y-6"></div>
+        </section>
+
+        <!-- 3. 2026년 하이라이트 신제품 및 출품 로봇 Section -->
+        <section id="highlights" class="scroll-mt-20 bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-700">
+            <div class="flex items-center gap-3 pb-4 mb-6 border-b border-slate-200 dark:border-slate-700">
+                <span class="p-2.5 rounded-xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </span>
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">3. 2026년 하이라이트 신제품 및 출품 로봇</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">세계 최초 공개 및 차세대 버전 핵심 로봇 라인업</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Robot 1 -->
+                <div class="bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-sky-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-sky-100 text-sky-800 dark:bg-sky-900/60 dark:text-sky-300">정밀 모션</span>
+                            <span class="text-[11px] text-slate-400 font-mono">NEW PREMIERE</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Shot Put SP1 <span class="text-xs font-normal text-slate-500">(铅球SP1)</span></h3>
+                        <p class="text-xs text-sky-600 dark:text-sky-400 font-medium mb-3">Zhishen Xinchuang (Suzhou) Intelligent Tech</p>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-white dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+                            고출력 토크 밀도 및 차세대 정밀 모션 제어 메커니즘이 적용된 최첨단 다목적 관절형 로봇
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Robot 2 -->
+                <div class="bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-sky-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-rose-100 text-rose-800 dark:bg-rose-900/60 dark:text-rose-300">휴머노이드 / AI</span>
+                            <span class="text-[11px] text-slate-400 font-mono">WORLD PREMIERE</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Tiangong Omni <span class="text-xs font-normal text-slate-500">(天工Omni)</span></h3>
+                        <p class="text-xs text-sky-600 dark:text-sky-400 font-medium mb-3">베이징 휴머노이드 로봇 혁신센터</p>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-white dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+                            범용 구체 지능(Embodied AI) 플랫폼에 기반한 차세대 전동 휴머노이드 대표 모델
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Robot 3 -->
+                <div class="bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-sky-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">적응형 이동</span>
+                            <span class="text-[11px] text-slate-400 font-mono">NEXT-GEN</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Booster T2</h3>
+                        <p class="text-xs text-sky-600 dark:text-sky-400 font-medium mb-3">Beijing Booster Robotics Technology</p>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-white dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+                            복잡한 가변 환경 적응형 주행 능력과 다목적 필드 작업 수행 능력을 고루 갖춘 로봇
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Robot 4 -->
+                <div class="bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-sky-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-purple-100 text-purple-800 dark:bg-purple-900/60 dark:text-purple-300">시각-촉각 융합</span>
+                            <span class="text-[11px] text-slate-400 font-mono">GEN-AI ROBOT</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Kengo</h3>
+                        <p class="text-xs text-sky-600 dark:text-sky-400 font-medium mb-3">Xinghai Image (Beijing) AI Technology</p>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-white dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+                            시각-촉각 멀티모달 융합 생성형 AI 제어 알고리즘이 탑재된 지능형 관절 로봇
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Robot 5 -->
+                <div class="bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-sky-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-amber-100 text-amber-800 dark:bg-amber-900/60 dark:text-amber-300">산업용 고하중</span>
+                            <span class="text-[11px] text-slate-400 font-mono">INDUSTRIAL HUMANOID</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Kepler Kirin Series <span class="text-xs font-normal text-slate-500">(开普勒麒麟)</span></h3>
+                        <p class="text-xs text-sky-600 dark:text-sky-400 font-medium mb-3">Shanghai Kepler Robot</p>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-white dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+                            고난도 산업 제조 및 물류 작업 현장에 특화된 고하중 양팔 휴머노이드 플랫폼
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Robot 6 -->
+                <div class="bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-sky-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-indigo-100 text-indigo-800 dark:bg-indigo-900/60 dark:text-indigo-300">유연 관절</span>
+                            <span class="text-[11px] text-slate-400 font-mono">FLEX-JOINTS</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Vbot Humanoid Robot</h3>
+                        <p class="text-xs text-sky-600 dark:text-sky-400 font-medium mb-3">Vita Dynamics (Beijing) Technology</p>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-white dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+                            인간 수준의 유연한 고정밀 관절 제어 기술이 적용된 차세대 다기능 휴머노이드
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 참관 목적별 맞춤 추천 동선 Section -->
+        <section id="tips" class="scroll-mt-20 bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-700">
+            <div class="flex items-center gap-3 pb-4 mb-6 border-b border-slate-200 dark:border-slate-700">
+                <span class="p-2.5 rounded-xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                </span>
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">4. 참관 목적별 맞춤 추천 동선 팁</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">목적에 맞게 선택하여 시간을 효율적으로 배분하세요.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tip 1 -->
+                <div class="bg-blue-50/50 dark:bg-slate-900/80 rounded-xl p-5 border border-blue-200 dark:border-blue-900/40 relative">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs">1</span>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">완제품 상용 로봇 & 물류 탐색</h3>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+                        상용화된 서비스 및 물류 로봇 기술을 집중 탐색하려면 <strong class="text-blue-600 dark:text-blue-400">Area A</strong> 중심으로 관람하세요.
+                    </p>
+                    <div class="bg-white dark:bg-slate-800 p-3 rounded-lg text-xs text-slate-500 dark:text-slate-400 border border-blue-100 dark:border-slate-700">
+                        📍 <strong>추천 주요 부스:</strong> RealMan, KEENON Robotics, JD.com (징동), Haier 부스
+                    </div>
+                </div>
+
+                <!-- Tip 2 -->
+                <div class="bg-emerald-50/50 dark:bg-slate-900/80 rounded-xl p-5 border border-emerald-200 dark:border-emerald-900/40 relative">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-xs">2</span>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">글로벌 공급망 & 부품 소싱</h3>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+                        글로벌 반도체 플랫폼, 센서 및 핵심 감속기/모터 업체를 찾으려면 <strong class="text-emerald-600 dark:text-emerald-400">Area B</strong>를 탐색하세요.
+                    </p>
+                    <div class="bg-white dark:bg-slate-800 p-3 rounded-lg text-xs text-slate-500 dark:text-slate-400 border border-emerald-100 dark:border-slate-700">
+                        📍 <strong>추천 주요 부스:</strong> AMD, Infineon, Hesai, maxon, Harmonic Drive, 한국관(로보티즈 외)
+                    </div>
+                </div>
+
+                <!-- Tip 3 -->
+                <div class="bg-rose-50/50 dark:bg-slate-900/80 rounded-xl p-5 border border-rose-200 dark:border-rose-900/40 relative">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="w-7 h-7 rounded-full bg-rose-600 text-white flex items-center justify-center font-bold text-xs">3</span>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">차세대 피지컬 AI & 휴머노이드</h3>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+                        최신 피지컬 AI와 차세대 휴머노이드 로봇 기술 동향을 한눈에 파악하려면 <strong class="text-rose-600 dark:text-rose-400">Area C</strong>를 필수 집중 참관하세요.
+                    </p>
+                    <div class="bg-white dark:bg-slate-800 p-3 rounded-lg text-xs text-slate-500 dark:text-slate-400 border border-rose-100 dark:border-slate-700">
+                        📍 <strong>추천 주요 부스:</strong> 국가/베이징 휴머노이드 혁신센터, UBTECH, Unitree, LimX Dynamics
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal for Company Feature Details -->
+    <div id="company-modal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 sm:p-7 shadow-2xl border border-slate-200 dark:border-slate-700 relative">
+            <button onclick="closeCompanyModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+
+            <div class="flex items-center gap-2 mb-2">
+                <span id="modal-area-badge" class="px-2.5 py-0.5 rounded font-bold text-xs bg-blue-600 text-white">Area A</span>
+                <span id="modal-category-badge" class="text-xs font-semibold text-sky-600 dark:text-sky-400">카테고리</span>
+            </div>
+
+            <h3 id="modal-company-name" class="text-xl font-bold text-slate-900 dark:text-white mb-4 pr-6">기업 이름</h3>
+
+            <div class="space-y-4 text-xs sm:text-sm">
+                <div class="bg-slate-50 dark:bg-slate-900 p-3.5 rounded-xl border border-slate-200 dark:border-slate-700">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">핵심 분야 (Focus Area)</span>
+                    <p id="modal-company-focus" class="text-slate-800 dark:text-slate-200 font-medium">핵심 분야 정보</p>
+                </div>
+
+                <div>
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1.5">주요 기술 & 기업 특징 (Key Features)</span>
+                    <ul id="modal-company-features" class="list-disc list-inside space-y-1.5 text-slate-600 dark:text-slate-300 leading-relaxed bg-sky-50/50 dark:bg-slate-900/60 p-3.5 rounded-xl border border-sky-100 dark:border-slate-700">
+                    </ul>
+                </div>
+
+                <div class="bg-amber-50 dark:bg-amber-900/30 p-3.5 rounded-xl border border-amber-200 dark:border-amber-800/50">
+                    <span class="text-xs font-bold text-amber-800 dark:text-amber-300 uppercase tracking-wider block mb-1">💡 참관 핵심 포인트 (Key Takeaway)</span>
+                    <p id="modal-company-takeaway" class="text-amber-900 dark:text-amber-200 text-xs leading-relaxed">참관 포인트 정보</p>
+                </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700 flex justify-end">
+                <button onclick="closeCompanyModal()" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 dark:bg-slate-700 dark:hover:bg-slate-600 text-white rounded-lg text-xs font-semibold">
+                    닫기
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-16 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500 dark:text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p>© 2026 World Robot Conference Expo Guide | 2026 세계 로봇 컨퍼런스 엑스포 안내 가이드</p>
+            <p class="text-slate-400 dark:text-slate-500">본 가이드는 WRC Expo 공식 출품 현황 및 핵심 기업 데이터베이스를 기반으로 제공됩니다.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Data Engine -->
+    <script>
+        const FEATURED_COMPANIES_DB = {
+            "JD.com (글로벌 독점 전략 파트너)": {
+                featured: true,
+                focus: "풀필먼트 무인 물류, 자율주행 배송, 스마트 유통망",
+                features: [
+                    "WRC Expo 공식 글로벌 독점 전략 파트너",
+                    "대규모 자율주행 물류 로봇, 무인 창고 자동화 셀 실물 전시",
+                    "라스트마일 드론 및 배송 로봇 통합 플랫폼 운용"
+                ],
+                takeaway: "중국 최대 유통망과의 물류 로봇 시스템 통합 및 인프라 협력 기회 확인"
+            },
+            "RealMan Intelligent Tech": {
+                featured: true,
+                focus: "초경량 협동 로봇 팔, 시각 지능 모듈",
+                features: [
+                    "상용 서비스 및 상업용 조리/서빙용 초경량 관절 로봇 모듈 주력",
+                    "높은 가성비와 손쉬운 API 프로그래밍 제공"
+                ],
+                takeaway: "식음료(F&B) 및 매장 자동화 솔루션 부스 집중 탐색"
+            },
+            "KEENON Robotics": {
+                featured: true,
+                focus: "상업용 서빙·배달·방역 자율주행 로봇",
+                features: [
+                    "글로벌 서비스 로봇 점유율 선도 기업",
+                    "다중 로봇 군집 제어 알고리즘 및 슬램(SLAM) 내비게이션 기술 보유"
+                ],
+                takeaway: "호텔, 병원, 식당용 실내 자율주행 상용화 완제품 비교"
+            },
+            "Leader Harmonious Drive Systems (리더 하모닉)": {
+                featured: true,
+                focus: "정밀 하모닉 감속기 (Harmonic Reducer)",
+                features: [
+                    "중국 최대 하모닉 감속기 제조 업체로 휴머노이드 관절 부품 선도 공급",
+                    "고출력 밀도 및 초소형 초정밀 라인업 보유"
+                ],
+                takeaway: "휴머노이드 및 관절 로봇 제조사의 원가 절감형 감속기 공급망 파악"
+            },
+            "Beijing Longwood Valley Medical (Changmugu Medical)": {
+                featured: false,
+                focus: "정형외과 수술 보조 수술용 정밀 로봇",
+                features: [
+                    "AI 영상 진단 기반의 정밀 인공관절 수술 로봇 개발",
+                    "의료기기 인허가 완료된 상용화 시스템"
+                ],
+                takeaway: "중국 최첨단 의료/수술 로봇 시장 동향 파악"
+            },
+            "Hesai Technology (헤사이)": {
+                featured: true,
+                focus: "고성능 3D LiDAR (라이다) 센서",
+                features: [
+                    "글로벌 자율주행 및 로봇용 LiDAR 시장 선도 업체",
+                    "초소형 고정형(Solid-State) LiDAR 및 하이브리드 고해상도 라인업",
+                    "휴머노이드 및 AMR의 시각/거리 감지 핵심 부품"
+                ],
+                takeaway: "차세대 로봇 자율주행용 핵심 라이다 공급망 검증"
+            },
+            "Orbbec 3D (오르벡)": {
+                featured: true,
+                focus: "3D 비전 카메라, Depth 센서",
+                features: [
+                    "로봇용 3D 공간 인식 및 물체 인식 3D 카메라 특화",
+                    "NVIDIA 플랫폼과 연동되는 광학 비전 모듈 제공"
+                ],
+                takeaway: "휴머노이드 및 협동로봇용 입체 비전 센서 소싱"
+            },
+            "ROBOTIS (로보티즈)": {
+                featured: true,
+                focus: "스마트 액추에이터(Dynamixel), 자율주행 실외 배송로봇(개미)",
+                features: [
+                    "한국관 대표 참출 기업, 고정밀 사이클로이드 감속기 일체형 다이나믹셀 전시",
+                    "실외 자율주행 로봇 서비스 상용화 노하우 보유"
+                ],
+                takeaway: "국산 고성능 액추에이터 및 실외 자율주행 기술력 확인"
+            },
+            "Neuromeka (뉴로메카)": {
+                featured: true,
+                focus: "협동로봇(Indy), 자율이동로봇(Moby), 차세대 제어기",
+                features: [
+                    "충돌 감지 안전 알고리즘 기반 협동로봇 솔루션",
+                    "중소 제조현장 맞춤형 스마트 팩토리 셀 구축"
+                ],
+                takeaway: "국산 협동로봇의 가격 경쟁력 및 제어 소프트웨어 확인"
+            },
+            "maxon motor (맥슨모터)": {
+                featured: true,
+                focus: "초정밀 DC/BLDC 모터, 드라이브 관절 모듈",
+                features: [
+                    "스위스 명품 모터 브랜드, 우주 탐사선 및 정밀 의료/로봇용 관절 공급",
+                    "휴머노이드 전용 고밀도 토크 모터 솔루션 선보임"
+                ],
+                takeaway: "최고 수준의 초정밀 모터 및 토크 밀도 기술력 비교"
+            },
+            "Harmonic Drive Systems": {
+                featured: true,
+                focus: "글로벌 오리지널 정밀 하모닉 드라이브",
+                features: [
+                    "세계 정밀 감속기 표준을 제시하는 일본 오리지널 브랜딩",
+                    "휴머노이드 손가락 및 관절용 초소형 감속기 전면 배치"
+                ],
+                takeaway: "글로벌 정밀 감속기 표준 기술 점검"
+            },
+            "AMD": {
+                featured: true,
+                focus: "임베디드 AI 칩셋, 엣지 컴퓨팅 FPGA (Kria)",
+                features: [
+                    "로봇 실시간 제어 및 엣지 AI 처리를 위한 자일링스(Xilinx) 연동 솔루션",
+                    "멀티모달 AI 로봇 제어용 고성능 가속기 제공"
+                ],
+                takeaway: "로봇 메인 제어반용 엣지 AI 프로세서 파트너십 구축"
+            },
+            "Infineon Technologies (China)": {
+                featured: true,
+                focus: "전력 반도체, 모터 드라이버 IC, 센서",
+                features: [
+                    "로봇 관절 모터 구동용 고효율 SiC/GaN 전력 반도체",
+                    "고신뢰성 모터 제어 및 안전 시스템 센서"
+                ],
+                takeaway: "로봇 배터리 효율 및 모터 제어 회로 부품 탐색"
+            },
+            "국가-지방 공동 휴머노이드 로봇 혁신센터": {
+                featured: true,
+                focus: "국가 차원 휴머노이드 오픈소스 모션 플랫폼",
+                features: [
+                    "중국 국가 차원의 기술 연구 결과물 집중 공개",
+                    "공통 하드웨어 플랫폼 및 소프트웨어 오픈소스 생태계 조성"
+                ],
+                takeaway: "중국 휴머노이드 로봇 국가 표준 및 기술 프레임워크 확인"
+            },
+            "베이징 휴머노이드 로봇 혁신센터": {
+                featured: true,
+                focus: "전동 휴머노이드 'Tiangong(天工)', Embodied AI",
+                features: [
+                    "세계 최초 범용 Embodied AI 기반 풀사이즈 전동 휴머노이드 'Tiangong' 개발",
+                    "시속 6km/h 순수 전동 달리기 및 가변 지형 이동 실연"
+                ],
+                takeaway: "Area C 최고 인기도 부스, 'Tiangong Omni' 차세대 모델 시연 관람 필수"
+            },
+            "UBTECH Robotics (유비텍)": {
+                featured: true,
+                focus: "산업용 휴머노이드 'Walker S', 교육/서비스 로봇",
+                features: [
+                    "홍콩 증시 상장 휴머노이드 선도 기업",
+                    "제조 공장(전기차 생산라인)에 투입되어 품질 검사 및 작업 수행 실증"
+                ],
+                takeaway: "실제 자동차 생산라인에 적용된 휴머노이드 상용화 수준 평가"
+            },
+            "Unitree Robotics (유니트리/유슈)": {
+                featured: true,
+                focus: "4족 보행 로봇(Go2/B2), 범용 휴머노이드(H1/G1)",
+                features: [
+                    "글로벌 4족 보행 로봇 점유율 1위 및 저가격대 파격적 휴머노이드 출시",
+                    "고성능 자사 개발 모터 및 뛰어난 동적 밸런싱 능력"
+                ],
+                takeaway: "파격적 가성비 휴머노이드 'G1' 및 4족 보행 로봇 현장 퍼포먼스 체감"
+            },
+            "LimX Dynamics": {
+                featured: true,
+                focus: "다리-바퀴 복합 휴머노이드, 강화학습 모션 제어",
+                features: [
+                    "바퀴와 다리를 결합한 휠-레그(Wheel-leg) 로봇 'W1' 및 휴머노이드 'CL-1'",
+                    "계단 및 험지 돌파 능력이 탁월한 딥 강화학습 모션 알고리즘"
+                ],
+                takeaway: "복합 지형 적응형 주행 메커니즘 기술력 점검"
+            }
+        };
+
+        const WRC_DATA = [
+            {
+                area: "Area A",
+                title: "Area A: 로봇 응용, 전문 서비스, 대기업 및 정밀 부품관",
+                colorClass: "blue",
+                categories: [
+                    {
+                        name: "로봇 플랫폼 & AI 응용",
+                        companies: ["RealMan Intelligent Tech", "Beijing Yunji Tech", "KEENON Robotics", "Kepler Robot", "FAW (Suzhou) Robot", "Sichuan TLIBOT", "SENAD Technology"]
+                    },
+                    {
+                        name: "의료 & 특수 로봇",
+                        companies: ["Beijing Longwood Valley Medical (Changmugu Medical)", "Qianglian Zhichuang"]
+                    },
+                    {
+                        name: "산업용 & 중공업 자동화",
+                        companies: ["Wolong Electric Drive Group", "Shandong Guoxing Intelligent", "Hangzhou Shenhao Tech", "CITIC Heavy Industries"]
+                    },
+                    {
+                        name: "대기업 & 플랫폼",
+                        companies: ["JD.com (글로벌 독점 전략 파트너)", "Haier Home Robot"]
+                    },
+                    {
+                        name: "연구기관 & 대학",
+                        companies: ["CETC 21st Research Institute (China Electronic Tech Robot)", "베이징과학기술대학교 지능 바이오닉 무인 시스템 연구팀"]
+                    },
+                    {
+                        name: "부품, 감속기 & 구동계",
+                        companies: ["Leader Harmonious Drive Systems (리더 하모닉)", "STEP Robot", "Moons' Electric", "Kinco Automation", "Luoyang Hongyuan Bearing", "CCTY Company", "Benmo Dynamics"]
+                    }
+                ]
+            },
+            {
+                area: "Area B",
+                title: "Area B: 핵심 부품, 글로벌 반도체/센서 및 해외 대표 기업관",
+                colorClass: "emerald",
+                categories: [
+                    {
+                        name: "로봇 제어 & 지능형 상호작용",
+                        companies: ["Booster Robotics", "Yaskawa Shougang Robot", "Siasun Robot & Automation", "SMC Automation", "Zhejiang Hechuan Humanoid Robot", "Spirit AI", "EngineAI", "ROBOTERA", "PaXini Tech", "Inspire Robots"]
+                    },
+                    {
+                        name: "글로벌 IT & 반도체 기업",
+                        companies: ["AMD", "3M China", "Infineon Technologies (China)", "Realtek Semiconductor"]
+                    },
+                    {
+                        name: "비전, 센서 & LiDAR",
+                        companies: ["Hesai Technology (헤사이)", "Orbbec 3D (오르벡)", "Ningbo Keli Sensing", "ZVISION", "Slamtec", "Livox"]
+                    },
+                    {
+                        name: "한국관 & 해외 주요 기업",
+                        companies: ["ROBOTIS (로보티즈)", "Neuromeka (뉴로메카)", "Neubility (뉴빌리티)", "Wonik Robotics (원익로보틱스)", "Hyundai Sungwoo Solite (현대성우솔라이트)", "Solid Vue (솔리드뷰)", "Iron Device (아이언디바이스)", "Singapore Robotics Society"]
+                    },
+                    {
+                        name: "정밀 드라이브 & 모션 구동 부품",
+                        companies: ["maxon motor (맥슨모터)", "FAULHABER", "Harmonic Drive Systems", "Schaeffler (셰플러)", "MISUMI (미스미)", "igus (이구스)", "GigaDevice", "Black Sesame Technologies"]
+                    }
+                ]
+            },
+            {
+                area: "Area C",
+                title: "Area C: 휴머노이드 로봇(Humanoid), 구체 지능(Embodied AI) 및 지역 클러스터관",
+                colorClass: "rose",
+                categories: [
+                    {
+                        name: "국가 & 지방 휴머노이드 혁신센터",
+                        companies: ["국가-지방 공동 휴머노이드 로봇 혁신센터", "베이징 휴머노이드 로봇 혁신센터", "절강 휴머노이드 로봇 혁신센터", "후베이 휴머노이드 로봇 혁신센터", "광둥 구체지능 로봇 혁신센터", "청두 휴머노이드 로봇 혁신센터"]
+                    },
+                    {
+                        name: "선도 휴머노이드 & AI 로봇 브랜드",
+                        companies: ["UBTECH Robotics (유비텍)", "Unitree Robotics (유니트리/유슈)", "iFLYTEK (아이플라이텍)", "Dobot Robotics (두봇)", "LimX Dynamics", "Galbot", "Fourier Intelligence", "Astribot", "Vbot (Vita Dynamics)", "Magiclab Robotics", "Deep Robotics"]
+                    },
+                    {
+                        name: "특설관 & 연구기관",
+                        companies: ["중앙기업관 (Central Enterprises Exhibition Area)", "베이징 범용인공지능연구원 (BIGAI)", "강회첨단기술협동혁신센터"]
+                    },
+                    {
+                        name: "지역 로봇 산업 클러스터",
+                        companies: ["청두 클러스터: Chengdu CRP Robot, Aerospace Kaite, Reedy Intelligent Drive", "우한/후베이 클러스터: Optics Valley Huahui, Jingchu Humanoid Robot, Gelanruo Intelligent Robot, Wanji Optoelectronics"]
+                    }
+                ]
+            }
+        ];
+
+        let currentAreaFilter = 'all';
+        let currentSearchQuery = '';
+        let featuredOnly = false;
+
+        function renderCompanies() {
+            const container = document.getElementById('company-cards-container');
+            container.innerHTML = '';
+
+            let totalMatches = 0;
+
+            WRC_DATA.forEach(areaData => {
+                if (currentAreaFilter !== 'all' && areaData.area !== currentAreaFilter) return;
+
+                const filteredCategories = areaData.categories.map(cat => {
+                    const matchedCompanies = cat.companies.filter(c => {
+                        const isFeatured = FEATURED_COMPANIES_DB[c]?.featured;
+                        const matchesSearch = c.toLowerCase().includes(currentSearchQuery.toLowerCase()) || 
+                                              cat.name.toLowerCase().includes(currentSearchQuery.toLowerCase());
+
+                        if (featuredOnly) {
+                            return isFeatured && matchesSearch;
+                        }
+                        return matchesSearch;
+                    });
+                    return { ...cat, companies: matchedCompanies };
+                }).filter(cat => cat.companies.length > 0);
+
+                if (filteredCategories.length === 0) return;
+
+                totalMatches += filteredCategories.reduce((acc, c) => acc + c.companies.length, 0);
+
+                const areaBlock = document.createElement('div');
+                areaBlock.className = "border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden shadow-sm bg-slate-50/50 dark:bg-slate-900/50";
+
+                let badgeColor = areaData.area === 'Area A' ? 'bg-blue-600 text-white' : (areaData.area === 'Area B' ? 'bg-emerald-600 text-white' : 'bg-rose-600 text-white');
+
+                areaBlock.innerHTML = `
+                    <div class="bg-slate-100 dark:bg-slate-800/90 p-4 border-b border-slate-200 dark:border-slate-700 flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="px-2.5 py-0.5 rounded font-bold text-xs ${badgeColor}">${areaData.area}</span>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">${areaData.title}</h3>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        ${filteredCategories.map(cat => `
+                            <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                                <h4 class="font-bold text-xs sm:text-sm text-sky-600 dark:text-sky-400 mb-3 flex items-center gap-1.5 pb-2 border-b border-slate-100 dark:border-slate-700">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+                                    ${cat.name}
+                                </h4>
+                                <div class="flex flex-wrap gap-2">
+                                    ${cat.companies.map(comp => {
+                                        const featureData = FEATURED_COMPANIES_DB[comp];
+                                        if (featureData) {
+                                            return `
+                                                <button onclick="openCompanyModal('${comp.replace(/'/g, "\\'")}', '${areaData.area}', '${cat.name}')" 
+                                                    class="inline-flex items-center gap-1 bg-amber-50 hover:bg-amber-100 text-amber-900 dark:bg-amber-900/40 dark:hover:bg-amber-900/70 dark:text-amber-200 text-xs font-medium px-2.5 py-1.5 rounded-lg border border-amber-300 dark:border-amber-700/80 transition-all shadow-sm text-left group">
+                                                    <span class="text-amber-500 group-hover:scale-125 transition-transform">⭐</span>
+                                                    <span>${comp}</span>
+                                                </button>
+                                            `;
+                                        } else {
+                                            return `
+                                                <span class="inline-block bg-slate-100 dark:bg-slate-700/60 text-slate-800 dark:text-slate-200 text-xs px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-600">
+                                                    ${comp}
+                                                </span>
+                                            `;
+                                        }
+                                    }).join('')}
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+
+                container.appendChild(areaBlock);
+            });
+
+            if (totalMatches === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-dashed border-slate-300 dark:border-slate-700">
+                        <p class="text-slate-500 dark:text-slate-400 text-sm">검색 결과가 없습니다.</p>
+                    </div>
+                `;
+            }
+        }
+
+        function openCompanyModal(companyName, area, category) {
+            const data = FEATURED_COMPANIES_DB[companyName];
+            if (!data) return;
+
+            document.getElementById('modal-area-badge').innerText = area;
+            document.getElementById('modal-category-badge').innerText = category;
+            document.getElementById('modal-company-name').innerText = companyName;
+            document.getElementById('modal-company-focus').innerText = data.focus;
+            document.getElementById('modal-company-takeaway').innerText = data.takeaway;
+
+            const featuresUl = document.getElementById('modal-company-features');
+            featuresUl.innerHTML = data.features.map(f => `<li>${f}</li>`).join('');
+
+            document.getElementById('company-modal').classList.remove('hidden');
+        }
+
+        function closeCompanyModal() {
+            document.getElementById('company-modal').classList.add('hidden');
+        }
+
+        function toggleFeaturedFilter() {
+            featuredOnly = !featuredOnly;
+            const btn = document.getElementById('toggle-featured-only');
+            if (featuredOnly) {
+                btn.classList.add('bg-amber-500', 'text-white');
+                btn.classList.remove('bg-amber-50', 'text-amber-800');
+            } else {
+                btn.classList.remove('bg-amber-500', 'text-white');
+                btn.classList.add('bg-amber-50', 'text-amber-800');
+            }
+            renderCompanies();
+        }
+
+        // Fixed Area Filter function receiving button element (`btnElement`)
+        function filterArea(btnElement, area) {
+            currentAreaFilter = area;
+            document.querySelectorAll('.area-filter-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-white', 'dark:bg-slate-800', 'text-slate-800', 'dark:text-white', 'shadow-sm');
+                btn.classList.add('text-slate-600', 'dark:text-slate-400');
+            });
+
+            if (btnElement) {
+                btnElement.classList.add('active', 'bg-white', 'dark:bg-slate-800', 'text-slate-800', 'dark:text-white', 'shadow-sm');
+                btnElement.classList.remove('text-slate-600', 'dark:text-slate-400');
+            }
+
+            renderCompanies();
+        }
+
+        function filterCompanies() {
+            currentSearchQuery = document.getElementById('company-search').value;
+            renderCompanies();
+        }
+
+        function toggleDarkMode() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                updateThemeIcons(false);
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                updateThemeIcons(true);
+            }
+        }
+
+        function updateThemeIcons(isDark) {
+            const darkIcon = document.getElementById('theme-toggle-dark-icon');
+            const lightIcon = document.getElementById('theme-toggle-light-icon');
+            if (isDark) {
+                darkIcon.classList.add('hidden');
+                lightIcon.classList.remove('hidden');
+            } else {
+                darkIcon.classList.remove('hidden');
+                lightIcon.classList.add('hidden');
+            }
+        }
+
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+                updateThemeIcons(true);
+            } else {
+                document.documentElement.classList.remove('dark');
+                updateThemeIcons(false);
+            }
+        }
+
+        window.onload = function() {
+            initTheme();
+            renderCompanies();
+        };
+    </script>
+</body>
+</html>
